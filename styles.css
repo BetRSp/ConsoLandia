@@ -1,7 +1,7 @@
 body {
     font-family: 'Comic Sans MS', sans-serif;
-    background-color: #f7f8fa;
-    color: #333;
+    background-color: white;
+    color: black;
     text-align: center;
     margin: 0;
     padding: 0;
@@ -14,6 +14,7 @@ body {
   
   header h1 {
     color: #4caf50;
+    font-weight: bold;
   }
   
   main {
@@ -24,12 +25,21 @@ body {
     margin: 20px auto;
     max-width: 600px;
   }
-
+  #consonante {
+    font-size: 1.0em; /* Aumenta el tamaño del texto */
+    padding: 3px; /* Aumenta el espacio interno */
+    width: auto; /* Ajusta el ancho automáticamente o cámbialo a un valor fijo */
+    height: 35px; /* Ajusta la altura del selector */
+    border-radius: 5px;
+  }
+  
   .selector{
     font-size: 21px;
+    color: black;
+   
   }
   #label{
-    font-size: 1.5em; /* Ajusta el tamaño de la fuente */
+    font-size: 1.0em; /* Ajusta el tamaño de la fuente */
     font-weight: bold; /* Opcional: Negrita */
     color: #333; /* Cambia el color si lo deseas */
   }
@@ -48,6 +58,7 @@ body {
     padding: 10px 20px;
     font-size: 1em;
     cursor: pointer;
+    border-radius: 5px;
     
   }
   
