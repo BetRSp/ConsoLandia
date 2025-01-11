@@ -37,37 +37,40 @@ const palabrasPorConsonante = {
   };
   
   let puntuacion = 0;
-  document.getElementById("palabra").textContent = ""; // Inicializar como vacío
-  let temporizadorIntervalo;
-  let tiempoRestante = 60; // Tiempo inicial en segundos
-  let temporizadorCorriendo = false; // Bandera para el temporizador
+let palabraVerificada = false; // Nueva bandera para evitar puntuación duplicada
+document.getElementById("palabra").textContent = ""; // Inicializar como vacío
+let temporizadorIntervalo;
+let tiempoRestante = 60; // Tiempo inicial en segundos
+let temporizadorCorriendo = false; // Bandera para el temporizador
+
+// Botón Generar Palabra
+document.getElementById("generar-palabra").addEventListener("click", () => {
+  const consonante = document.getElementById("consonante").value;
+
+  if (!palabrasPorConsonante[consonante]) {
+    alert("Por favor, selecciona una consonante válida.");
+    return;
+  }
+
+  const { palabras, imagenes, audios } = palabrasPorConsonante[consonante];
+  const index = Math.floor(Math.random() * palabras.length);
+
+  const palabra = palabras[index];
+  document.getElementById("palabra").textContent = palabra;
+  document.getElementById("imagen-palabra").src = imagenes[index];
+  document.getElementById("imagen-palabra").alt = palabra;
+  document.getElementById("reproducir-audio").dataset.audio = audios[index];
+
+  cargarJuego(palabra);
+  desbloquearInteracciones();
+
+  palabraVerificada = false; // Restablecer la bandera para la nueva palabra
+
+  // Limpiar el contenido del textarea
+  document.getElementById("area-escritura").value = "";
   
-  // Botón Generar Palabra
-  document.getElementById("generar-palabra").addEventListener("click", () => {
-    const consonante = document.getElementById("consonante").value;
-  
-    if (!palabrasPorConsonante[consonante]) {
-      alert("Por favor, selecciona una consonante válida.");
-      return;
-    }
-  
-    const { palabras, imagenes, audios } = palabrasPorConsonante[consonante];
-    const index = Math.floor(Math.random() * palabras.length);
-  
-    const palabra = palabras[index];
-    document.getElementById("palabra").textContent = palabra;
-    document.getElementById("imagen-palabra").src = imagenes[index];
-    document.getElementById("imagen-palabra").alt = palabra;
-    document.getElementById("reproducir-audio").dataset.audio = audios[index];
-  
-    cargarJuego(palabra);
-    desbloquearInteracciones();
-  
-    // Limpiar el contenido del textarea
-    document.getElementById("area-escritura").value = ""; // Deja el textarea vacío
-  
-    // Solo iniciar el temporizador si no está corriendo
-    if (!temporizadorCorriendo) {
+    // Reanudar el temporizador si está pausado
+    if (!temporizadorCorriendo && tiempoRestante > 0) {
       iniciarTemporizador();
     }
   });
@@ -126,30 +129,39 @@ const palabrasPorConsonante = {
     }
   }
   
-  // Verificar Orden
-  document.getElementById("verificar-orden").addEventListener("click", () => {
-    const palabraCorrecta = document.getElementById("palabra").textContent.trim();
-    const letrasContenedor = document.getElementById("letras-contenedor").children;
   
-    // Verificar si hay una palabra generada y si el contenedor tiene letras
-    if (!palabraCorrecta || letrasContenedor.length === 0) {
-      alert("Primero debes generar una palabra antes de verificar.");
-      return; // Detener ejecución si no hay palabra generada
-    }
-  
-    const palabraActual = Array.from(letrasContenedor)
-      .map((span) => span.textContent)
-      .join("");
-  
-    if (palabraActual === palabraCorrecta) {
-      puntuacion += 1; // Incrementar puntuación
+ // Verificar Orden
+ // Verificar Orden
+document.getElementById("verificar-orden").addEventListener("click", () => {
+  const palabraCorrecta = document.getElementById("palabra").textContent.trim();
+  const letrasContenedor = document.getElementById("letras-contenedor").children;
+
+  // Verificar si hay una palabra generada y si el contenedor tiene letras
+  if (!palabraCorrecta || letrasContenedor.length === 0) {
+    alert("Primero debes generar una palabra antes de verificar.");
+    return; // Detener ejecución si no hay palabra generada
+  }
+
+  const palabraActual = Array.from(letrasContenedor)
+    .map((span) => span.textContent)
+    .join("");
+
+  if (palabraActual === palabraCorrecta) {
+    // Incrementar puntuación solo si no se ha verificado aún
+    if (!palabraVerificada) {
+      puntuacion += 1; // Incrementar puntuación una sola vez
       document.getElementById("puntuacion").textContent = `Puntuación: ${puntuacion}`;
       alert("¡Correcto! ¡Bien hecho!");
+      palabraVerificada = true; // Marcar que la palabra ya fue verificada
+      pausarTemporizador();
     } else {
-      alert("Inténtalo de nuevo.");
+      alert("Esta palabra ya fue verificada.");
     }
-  });
-  
+  } else {
+    alert("Inténtalo de nuevo.");
+    // El temporizador continúa si la palabra está mal organizada
+  }
+});
   // Temporizador
   function iniciarTemporizador() {
     temporizadorCorriendo = true; // Marcar que el temporizador está corriendo
@@ -171,21 +183,24 @@ const palabrasPorConsonante = {
     }, 1000);
   }
   
-  function bloquearInteracciones() {
-    // Bloquear botones e interacciones
-    document.querySelectorAll("#letras-contenedor span").forEach((span) => {
-      span.draggable = false;
-    });
-    document.getElementById("verificar-orden").disabled = true;
-    document.getElementById("generar-palabra").disabled = true;
+  function pausarTemporizador() {
+    clearInterval(temporizadorIntervalo); // Detiene el intervalo del temporizador
+    temporizadorCorriendo = false; // Actualiza la bandera
   }
   
   function desbloquearInteracciones() {
-    // Desbloquear botones e interacciones
     document.querySelectorAll("#letras-contenedor span").forEach((span) => {
       span.draggable = true;
     });
-    document.getElementById("verificar-orden").disabled = false;
-    document.getElementById("generar-palabra").disabled = false;
+    document.getElementById("verificar-orden").disabled = false; // Habilitar verificar
+    document.getElementById("generar-palabra").disabled = false; // Habilitar generar
+  }
+  
+  function bloquearInteracciones() {
+    document.querySelectorAll("#letras-contenedor span").forEach((span) => {
+      span.draggable = false;
+    });
+    document.getElementById("verificar-orden").disabled = true; // Bloquear verificar
+    document.getElementById("generar-palabra").disabled = true; // Bloquear generar
   }
   
