@@ -15,7 +15,7 @@ const palabrasPorConsonante = {
       audios: ["dado.mp3", "delfin.mp3", "dia.mp3"],
     },
     S: {
-      palabras: ["Sapo", "Sopa", "sol","solo","Suma",],
+      palabras: ["Sapo", "Sopa", "sol","solo","Suma", "Samuel"],
       imagenes: ["dado.jpg", "delfin.jpg", "dia.jpg"],
       audios: ["dado.mp3", "delfin.mp3", "dia.mp3"],
     },
@@ -26,12 +26,12 @@ const palabrasPorConsonante = {
     },
     P: {
       palabras: ["Papá", "pila", "Pomo", "Puma", "Pito","Pipa"],
-      imagenes: ["images_animadas/papa.jpg", "images_animadas/pila.jpg", "pomo.jpg", "puma.jpg", "pito.jpg", "pipa.jpg"],
+      imagenes: ["images_animadas/papa.jpg", "images_animadas/pila.jpg", "images_animadas/pomo.jpg", "images_animadas/puma.jpg", "images_animadas/pito.jpg", "images_animadas/pipa.jpg"],
       audios: ["Papa.mp3", "Pila.mp3", "Pomo.mp3"],
     },
     M: {
-      palabras: ["Mamá", "Mimo", "Mima", "Momia","Misa","Masa"],
-      imagenes: ["dado.jpg", "delfin.jpg", "dia.jpg"],
+      palabras: ["Mamá", "Mimo", "Mima", "Momia","Misa","Masa","Matias"],
+      imagenes: ["images_animadas/mama.jpg", "images_animadas/mimo.jpg.jpeg", "images_animadas/mima.jpg","images_animadas/momia.jpg", "images_animadas/misa.jpg", "images_animadas/masa.jpg","images_animadas/matias.jpg.png"],
       audios: ["dado.mp3", "delfin.mp3", "dia.mp3"],
     },
   };
