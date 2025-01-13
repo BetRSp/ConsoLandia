@@ -9,7 +9,7 @@ body {
   
   header {
     background-color: #b7e0f8;
-    padding: 20px;
+    padding: 1px;
   }
   
   header h1 {
@@ -44,9 +44,9 @@ body {
     color: #333; /* Cambia el color si lo deseas */
   }
   textarea {
-    width: 100%;
-    height: 100px;
-    font-size: 5.2em;
+    width: 410px;
+    height: 53px;
+    font-size: 3.2em;
     text-align: center;
 
   }
@@ -114,4 +114,51 @@ img {
     font-size: 1.2em;
     color: #ff5722;
   }
-  
+  /* Estilo del fondo del modal */
+.modal {
+  display: none; /* Oculto por defecto */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4); /* Fondo semi-transparente */
+}
+
+/* Contenedor del contenido del modal */
+.modal-contenido {
+  background-color: white;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 50%;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Botón para cerrar el modal */
+.cerrar {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  float: right;
+  cursor: pointer;
+}
+
+.cerrar:hover,
+.cerrar:focus {
+  color: black;
+}
+
+/* Texto del modal */
+#mensaje-modal {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* Personalización con emojis */
+.emoticono {
+  font-size: 30px;
+}

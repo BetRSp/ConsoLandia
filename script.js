@@ -16,7 +16,7 @@ const palabrasPorConsonante = {
     },
     S: {
       palabras: ["Sapo", "Sopa", "sol","solo","Suma", "Samuel"],
-      imagenes: ["dado.jpg", "delfin.jpg", "dia.jpg"],
+      imagenes: ["images_animadas/sapo.jpg", "images_animadas/sopa.jpg", "images_animadas/sol.jpg", "images_animadas/solo.jpg.jpg", "images_animadas/suma.jpg ", "images_animadas/samuel.jpg.png"],
       audios: ["dado.mp3", "delfin.mp3", "dia.mp3"],
     },
     L: {
@@ -128,18 +128,35 @@ document.getElementById("generar-palabra").addEventListener("click", () => {
       letraArrastrada = null; // Resetear
     }
   }
-  
-  
+  // Función para mostrar el modal con mensaje personalizado
+function mostrarModal(mensaje, emoji = "") {
+  const modal = document.getElementById("modal-alerta");
+  const mensajeModal = document.getElementById("mensaje-modal");
+
+  mensajeModal.innerHTML = `<span class="emoticono">${emoji}</span> ${mensaje}`;
+  modal.style.display = "block";
+
+  // Cerrar modal al hacer clic en la 'X'
+  document.getElementById("cerrar-modal").onclick = () => {
+    modal.style.display = "none";
+  };
+
+  // Cerrar modal al hacer clic fuera del contenido
+  window.onclick = (event) => {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  };
+}
+
  // Verificar Orden
- // Verificar Orden
-document.getElementById("verificar-orden").addEventListener("click", () => {
+ document.getElementById("verificar-orden").addEventListener("click", () => {
   const palabraCorrecta = document.getElementById("palabra").textContent.trim();
   const letrasContenedor = document.getElementById("letras-contenedor").children;
 
-  // Verificar si hay una palabra generada y si el contenedor tiene letras
   if (!palabraCorrecta || letrasContenedor.length === 0) {
-    alert("Primero debes generar una palabra antes de verificar.");
-    return; // Detener ejecución si no hay palabra generada
+    mostrarModal("Primero debes generar una palabra antes de verificar.", "⚠️");
+    return;
   }
 
   const palabraActual = Array.from(letrasContenedor)
@@ -147,19 +164,17 @@ document.getElementById("verificar-orden").addEventListener("click", () => {
     .join("");
 
   if (palabraActual === palabraCorrecta) {
-    // Incrementar puntuación solo si no se ha verificado aún
     if (!palabraVerificada) {
-      puntuacion += 1; // Incrementar puntuación una sola vez
+      puntuacion += 1;
       document.getElementById("puntuacion").textContent = `Puntuación: ${puntuacion}`;
-      alert("¡Correcto! ¡Bien hecho!");
-      palabraVerificada = true; // Marcar que la palabra ya fue verificada
+      mostrarModal("¡Correcto! ¡Bien hecho! 🎉", "✅");
+      palabraVerificada = true;
       pausarTemporizador();
     } else {
-      alert("Esta palabra ya fue verificada.");
+      mostrarModal("Esta palabra ya fue verificada.", "ℹ️");
     }
   } else {
-    alert("Inténtalo de nuevo.");
-    // El temporizador continúa si la palabra está mal organizada
+    mostrarModal("Inténtalo de nuevo.", "❌");
   }
 });
   // Temporizador
