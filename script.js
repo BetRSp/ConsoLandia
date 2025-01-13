@@ -1,27 +1,27 @@
 const palabrasPorConsonante = {
     B: {
-      palabras: ["Banana", "Barco", "Bola"],
-      imagenes: ["banana.jpg", "barco.jpg", "bola.jpg"],
+      palabras: ["Banana", "Barco", "Bola", "Bote", "Burro", "Ballena"],
+      imagenes: ["images_animadas/banana.jpg", "images_animadas/barco.jpg", "images_animadas/bola.jpg", "images_animadas/bote.jpg", "images_animadas/burro.jpg", "images_animadas/ballena.jpg"],
       audios: ["banana.mp3", "barco.mp3", "bola.mp3"],
     },
     C: {
-      palabras: ["Casa", "Coche", "Cielo"],
-      imagenes: ["casa.jpg", "coche.jpg", "cielo.jpg"],
+      palabras: ["Casa", "Coche", "Cielo", "Camisa", "Cerdo", "Caracol"],
+      imagenes: ["images_animadas/casa.jpg", "images_animadas/coche.jpg", "images_animadas/cielo.jpg", "images_animadas/camisa.jpg", "images_animadas/cerdo.jpg", "images_animadas/caracol.jpg"],
       audios: ["casa.mp3", "coche.mp3", "cielo.mp3"],
     },
     D: {
-      palabras: ["Dado", "Delfín", "Día"],
-      imagenes: ["dado.jpg", "delfin.jpg", "dia.jpg"],
+      palabras: ["Dado", "Delfín", "Día", "Dedo", "Diente", "Diamante"],
+      imagenes: ["images_animadas/dado.jpg", "images_animadas/delfin.jpg", "images_animadas/dia.jpg", "images_animadas/dedo.jpg", "images_animadas/diente.jpg","images_animadas/diamantes.jpg"],
       audios: ["dado.mp3", "delfin.mp3", "dia.mp3"],
     },
     S: {
-      palabras: ["Sapo", "Sopa", "sol","solo","Suma", "Samuel"],
-      imagenes: ["images_animadas/sapo.jpg", "images_animadas/sopa.jpg", "images_animadas/sol.jpg", "images_animadas/solo.jpg.jpg", "images_animadas/suma.jpg ", "images_animadas/samuel.jpg.png"],
+      palabras: ["Sapo", "Sopa", "sol","suelo","Suma", "Samuel"],
+      imagenes: ["images_animadas/sapo.jpg", "images_animadas/sopa.jpg", "images_animadas/sol.jpg", "images_animadas/suelo.jpg", "images_animadas/suma.jpg ", "images_animadas/samuel.jpg.png"],
       audios: ["dado.mp3", "delfin.mp3", "dia.mp3"],
     },
     L: {
-      palabras: ["Loma", "Lima", "Lola", "Lupa", "Lomo"],
-      imagenes: ["dado.jpg", "delfin.jpg", "dia.jpg"],
+      palabras: ["Loma", "Lima", "Lola", "Lupa", "Lobo","limón"],
+      imagenes: ["images_animadas/loma.jpg.png", "images_animadas/lima.jpg", "images_animadas/lola.jpg", "images_animadas/lupa.jpg", "images_animadas/lobo.jpg", "images_animadas/limon.jpg"],
       audios: ["dado.mp3", "delfin.mp3", "dia.mp3"],
     },
     P: {

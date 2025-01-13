@@ -111,8 +111,8 @@ img {
   }
   .temporizador {
     margin-top: 20px;
-    font-size: 1.2em;
-    color: #ff5722;
+    font-size: 1.5em;
+    color: red;
   }
   /* Estilo del fondo del modal */
 .modal {
