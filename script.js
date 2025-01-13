@@ -177,26 +177,57 @@ function mostrarModal(mensaje, emoji = "") {
     mostrarModal("Inténtalo de nuevo.", "❌");
   }
 });
-  // Temporizador
-  function iniciarTemporizador() {
-    temporizadorCorriendo = true; // Marcar que el temporizador está corriendo
+// Nueva función para reiniciar el juego
+function reiniciarJuego() {
+  // Restablecer variables y elementos de la interfaz
+  tiempoRestante = 60; // Restablecer tiempo inicial
+  puntuacion = 0; // Restablecer puntuación
+  palabraVerificada = false; // Restablecer bandera de palabra verificada
+
+  document.getElementById("puntuacion").textContent = `Puntuación: ${puntuacion}`;
+  document.getElementById("mensaje-temporizador").textContent = "";
+  document.getElementById("tiempo-restante").textContent = tiempoRestante;
+  document.getElementById("palabra").textContent = ""; // Limpiar palabra actual
+  document.getElementById("letras-contenedor").innerHTML = ""; // Limpiar letras
+  document.getElementById("area-escritura").value = ""; // Limpiar textarea
+  document.getElementById("imagen-palabra").src = ""; // Limpiar imagen
+  document.getElementById("imagen-palabra").alt = ""; // Limpiar texto alternativo
+
+  desbloquearInteracciones(); // Habilitar interacciones
+
+  iniciarTemporizador(); // Reiniciar temporizador
+}
+ // Temporizador
+function iniciarTemporizador() {
+  temporizadorCorriendo = true; // Marcar que el temporizador está corriendo
+  document.getElementById("tiempo-restante").textContent = tiempoRestante;
+  document.getElementById("mensaje-temporizador").textContent = "";
+
+  // Iniciar el temporizador
+  temporizadorIntervalo = setInterval(() => {
+    tiempoRestante -= 1;
     document.getElementById("tiempo-restante").textContent = tiempoRestante;
-    document.getElementById("mensaje-temporizador").textContent = "";
-  
-    // Iniciar el temporizador
-    temporizadorIntervalo = setInterval(() => {
-      tiempoRestante -= 1;
-      document.getElementById("tiempo-restante").textContent = tiempoRestante;
-  
-      if (tiempoRestante <= 0) {
-        clearInterval(temporizadorIntervalo); // Detener el temporizador
-        document.getElementById("mensaje-temporizador").textContent = 
-          `¡Tiempo agotado! Puntuación final: ${puntuacion}`;
-        bloquearInteracciones(); // Bloquear las interacciones al finalizar
-        temporizadorCorriendo = false; // Resetear la bandera
-      }
-    }, 1000);
-  }
+
+    if (tiempoRestante <= 0) {
+      clearInterval(temporizadorIntervalo); // Detener el temporizador
+      document.getElementById("mensaje-temporizador").textContent =
+        `¡Tiempo agotado! Puntuación final: ${puntuacion}`;
+      bloquearInteracciones(); // Bloquear interacciones al finalizar
+      temporizadorCorriendo = false; // Resetear la bandera
+      mostrarModal("¡Tiempo agotado! ¿Quieres jugar de nuevo?  ", " ", "⏰", " ");
+
+      // Agregar opción para reiniciar el juego
+      const reiniciarBtn = document.createElement("button");
+      reiniciarBtn.textContent = "Reiniciar Juego";
+      reiniciarBtn.style.marginTop = "10px";
+      reiniciarBtn.onclick = () => {
+        document.getElementById("modal-alerta").style.display = "none";
+        reiniciarJuego();
+      };
+      document.getElementById("mensaje-modal").appendChild(reiniciarBtn);
+    }
+  }, 1000);
+}
   
   function pausarTemporizador() {
     clearInterval(temporizadorIntervalo); // Detiene el intervalo del temporizador
