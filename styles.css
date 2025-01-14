@@ -9,14 +9,19 @@ body {
   
   header {
     background-color: #b7e0f8;
-    padding: 1px;
+    padding: 0px;
   }
   
   header h1 {
     color: #4caf50;
     font-weight: bold;
+    font-size: 36px;
+    margin-top: 0px;
   }
-  
+  header p {
+    font-size: 1.5rem;
+    margin-top: -26px;
+  }
   main {
     padding: 20px;
   }
@@ -36,9 +41,12 @@ body {
   .selector{
     font-size: 21px;
     color: black;
+    margin-top: -15px;
   }
   #label-consonante {
-    font-size: 26px;
+    font-size: 33px;
+    font-family: monospace;
+    
   }
   #label{
     font-size: 1.0em; /* Ajusta el tamaño de la fuente */
@@ -50,6 +58,7 @@ body {
     color: #333; /* Color del texto */
     text-align: center; /* Centrar el texto */
     margin: 10px 0; /* Espaciado superior e inferior */
+    font-family: monospace;
   }
   #imagen-palabra {
     width: 150px; /* Ancho de la imagen */
@@ -63,7 +72,10 @@ body {
     font-size: 1.5rem;
     margin-bottom: 10px;
   }
-
+  .practica p {
+    font-size: 1.5rem;
+    margin-bottom: 2px;
+}
   textarea {
     width: 410px;
     height: 53px;
@@ -76,11 +88,11 @@ body {
     background-color: #4caf50;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 7px 13px;
     font-size: 1em;
     cursor: pointer;
     border-radius: 5px;
-    
+   
   }
   
   button:hover {
@@ -88,8 +100,11 @@ body {
   }
   
   footer {
+    color: #4caf50;
     background-color: #b7e0f8;
-    padding: 10px;
+    padding: 1px;
+    font-size: 1.5rem;
+    font-weight: bold;
   }
   
   @media (max-width: 768px) {
@@ -111,12 +126,17 @@ img {
   .juego {
     margin-top: 30px;
   }
-  
+  .juego p {
+    font-size: 1.5rem;
+    margin-bottom: -12px;
+  }
   #letras-contenedor {
     display: flex;
     gap: 10px;
     justify-content: center;
     margin: 20px 0;
+    font-size: 24px;
+    font-family: monospace;
   }
   
   #letras-contenedor span {
