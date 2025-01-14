@@ -153,11 +153,11 @@ function mostrarModal(mensaje, emoji = "") {
 }
 
  // Verificar Orden
-document.getElementById("verificar-orden").addEventListener("click", () => {
-  const palabraCorrecta = document.getElementById("palabra").textContent.trim();
+ document.getElementById("verificar-orden").addEventListener("click", () => {
+  const palabraCorrecta = document.getElementById("palabra").textContent.trim().toLowerCase(); // Convertir a minúsculas
   const letrasContenedor = Array.from(document.getElementById("letras-contenedor").children);
-  const palabraOrdenada = letrasContenedor.map((span) => span.textContent).join("");
-  const textoEscrito = document.getElementById("area-escritura").value.trim();
+  const palabraOrdenada = letrasContenedor.map((span) => span.textContent).join("").toLowerCase(); // Convertir a minúsculas
+  const textoEscrito = document.getElementById("area-escritura").value.trim().toLowerCase(); // Convertir a minúsculas
 
   console.log("Palabra Actual:", palabraActual);
   console.log("Palabra Correcta:", palabraCorrecta);
