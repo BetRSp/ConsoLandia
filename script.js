@@ -37,11 +37,12 @@ const palabrasPorConsonante = {
   };
   
   let puntuacion = 0;
-let palabraVerificada = false; // Nueva bandera para evitar puntuación duplicada
-document.getElementById("palabra").textContent = ""; // Inicializar como vacío
-let temporizadorIntervalo;
-let tiempoRestante = 60; // Tiempo inicial en segundos
-let temporizadorCorriendo = false; // Bandera para el temporizador
+  let palabraVerificada = false; // Nueva bandera para evitar puntuación duplicada
+  let palabraActual = ""; // Inicializar palabraActual como una cadena vacía
+  let temporizadorIntervalo;
+  let tiempoRestante = 60; // Tiempo inicial en segundos
+  let temporizadorCorriendo = false; // Bandera para el temporizador
+  
 
 // Botón Generar Palabra
 document.getElementById("generar-palabra").addEventListener("click", () => {
@@ -55,7 +56,8 @@ document.getElementById("generar-palabra").addEventListener("click", () => {
   const { palabras, imagenes, audios } = palabrasPorConsonante[consonante];
   const index = Math.floor(Math.random() * palabras.length);
 
-  const palabra = palabras[index];
+  const palabra = palabras[index]; // Asignar palabra
+  palabraActual = palabra; // Asignar palabra a palabraActual
   document.getElementById("palabra").textContent = palabra;
   document.getElementById("imagen-palabra").src = imagenes[index];
   document.getElementById("imagen-palabra").alt = palabra;
@@ -65,6 +67,7 @@ document.getElementById("generar-palabra").addEventListener("click", () => {
   desbloquearInteracciones();
 
   palabraVerificada = false; // Restablecer la bandera para la nueva palabra
+
 
   // Limpiar el contenido del textarea
   document.getElementById("area-escritura").value = "";
@@ -150,33 +153,40 @@ function mostrarModal(mensaje, emoji = "") {
 }
 
  // Verificar Orden
- document.getElementById("verificar-orden").addEventListener("click", () => {
+document.getElementById("verificar-orden").addEventListener("click", () => {
   const palabraCorrecta = document.getElementById("palabra").textContent.trim();
-  const letrasContenedor = document.getElementById("letras-contenedor").children;
+  const letrasContenedor = Array.from(document.getElementById("letras-contenedor").children);
+  const palabraOrdenada = letrasContenedor.map((span) => span.textContent).join("");
+  const textoEscrito = document.getElementById("area-escritura").value.trim();
 
-  if (!palabraCorrecta || letrasContenedor.length === 0) {
-    mostrarModal("Primero debes generar una palabra antes de verificar.", "⚠️");
-    return;
+  console.log("Palabra Actual:", palabraActual);
+  console.log("Palabra Correcta:", palabraCorrecta);
+  console.log("Palabra Ordenada:", palabraOrdenada);
+  console.log("Texto Escrito:", textoEscrito);
+
+  // Nueva validación para verificar si el textarea está vacío
+  if (textoEscrito === "") {
+    mostrarModal("Debes escribir la palabra generada antes de verificar.", "📝");
+    return; // Detener ejecución si el textarea está vacío
   }
 
-  const palabraActual = Array.from(letrasContenedor)
-    .map((span) => span.textContent)
-    .join("");
-
-  if (palabraActual === palabraCorrecta) {
-    if (!palabraVerificada) {
-      puntuacion += 1;
-      document.getElementById("puntuacion").textContent = `Puntuación: ${puntuacion}`;
-      mostrarModal("¡Correcto! ¡Bien hecho! 🎉", "✅");
-      palabraVerificada = true;
-      pausarTemporizador();
-    } else {
-      mostrarModal("Esta palabra ya fue verificada.", "ℹ️");
-    }
-  } else {
-    mostrarModal("Inténtalo de nuevo.", "❌");
+  if (palabraOrdenada === palabraCorrecta && textoEscrito === palabraCorrecta) {
+      if (!palabraVerificada) {
+          puntuacion += 1;
+          document.getElementById("puntuacion").textContent = `Puntuación: ${puntuacion}`;
+          mostrarModal("¡Correcto! ¡Bien hecho! 🎉", "✅");
+          palabraVerificada = true;
+          pausarTemporizador();
+      } else {
+          mostrarModal("Esta palabra ya fue verificada.", "ℹ️");
+      }
+  } else if (textoEscrito !== palabraCorrecta) {
+      mostrarModal("La palabra escrita no coincide con la generada. Inténtalo de nuevo.", "✍️");
+  } else if (palabraOrdenada !== palabraCorrecta) {
+      mostrarModal("El orden de las letras no es correcto. Inténtalo de nuevo.", "🔠");
   }
 });
+
 // Nueva función para reiniciar el juego
 function reiniciarJuego() {
   // Restablecer variables y elementos de la interfaz
@@ -214,7 +224,7 @@ function iniciarTemporizador() {
         `¡Tiempo agotado! Puntuación final: ${puntuacion}`;
       bloquearInteracciones(); // Bloquear interacciones al finalizar
       temporizadorCorriendo = false; // Resetear la bandera
-      mostrarModal("¡Tiempo agotado! ¿Quieres jugar de nuevo?  ", " ", "⏰", " ");
+      mostrarModal("¡Tiempo agotado! ¿Quieres jugar de nuevo?  ", "⏰",);
 
       // Agregar opción para reiniciar el juego
       const reiniciarBtn = document.createElement("button");
