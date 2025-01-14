@@ -36,13 +36,34 @@ body {
   .selector{
     font-size: 21px;
     color: black;
-   
+  }
+  #label-consonante {
+    font-size: 26px;
   }
   #label{
     font-size: 1.0em; /* Ajusta el tamaño de la fuente */
     font-weight: bold; /* Opcional: Negrita */
     color: #333; /* Cambia el color si lo deseas */
   }
+  .resultado h2 {
+    font-size: 3rem; /* Tamaño de la fuente */
+    color: #333; /* Color del texto */
+    text-align: center; /* Centrar el texto */
+    margin: 10px 0; /* Espaciado superior e inferior */
+  }
+  #imagen-palabra {
+    width: 150px; /* Ancho de la imagen */
+    height: auto; /* Mantiene la proporción */
+    display: block; /* Asegura que se comporte como un bloque */
+    margin: 10px auto; /* Centra la imagen horizontalmente */
+    font-size: 2rem;
+  
+  }
+  .resultado p {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
   textarea {
     width: 410px;
     height: 53px;
