@@ -193,6 +193,8 @@ function reiniciarJuego() {
   tiempoRestante = 60; // Restablecer tiempo inicial
   puntuacion = 0; // Restablecer puntuación
   palabraVerificada = false; // Restablecer bandera de palabra verificada
+  temporizadorCorriendo = false; // Asegurar que el temporizador no inicie
+  clearInterval(temporizadorIntervalo); // Detener cualquier temporizador existente
 
   document.getElementById("puntuacion").textContent = `Puntuación: ${puntuacion}`;
   document.getElementById("mensaje-temporizador").textContent = "";
@@ -204,9 +206,8 @@ function reiniciarJuego() {
   document.getElementById("imagen-palabra").alt = ""; // Limpiar texto alternativo
 
   desbloquearInteracciones(); // Habilitar interacciones
-
-  iniciarTemporizador(); // Reiniciar temporizador
 }
+
  // Temporizador
 function iniciarTemporizador() {
   temporizadorCorriendo = true; // Marcar que el temporizador está corriendo
