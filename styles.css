@@ -53,7 +53,20 @@ body {
     font-weight: bold;
     font-size: 36px;
     margin-top: 0px;
-    text-shadow: rgba(54,224,108,0.9) 0px 0px 33px; 
+    background:  #b7e0f8;
+    text-align: center;
+    padding: 2px 0;
+    box-shadow: 0 -9px 8px rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 2px 0px #000000, 5px 4px 0px rgba(0,0,0,0.15);
+    font-family: Lucida Console;
+    letter-spacing: 2px;
+    word-spacing: 0px;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: small-caps;
+    text-transform: capitalize;
+    
+    
   }
   header p {
     font-size: 1.5rem;
@@ -151,11 +164,21 @@ body {
   
   footer {
     color: #4caf50;
-    background-color: #b7e0f8;
-    padding: 1px;
-    font-size: 1.5rem;
     font-weight: bold;
-    text-shadow: rgba(54,224,108,0.9) 0px 0px 33px; 
+    font-size: 1.7rem;
+    margin-top: 0px;
+    background:  #b7e0f8;
+    text-align: center;
+    padding: 2px 0;
+    box-shadow: 0 -9px 8px rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 2px 0px #000000, 5px 4px 0px rgba(0,0,0,0.15);
+    font-family: Lucida Console;
+    letter-spacing: 2px;
+    word-spacing: 0px;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: small-caps;
+    text-transform: capitalize;
   }
   
   @media (max-width: 768px) {
