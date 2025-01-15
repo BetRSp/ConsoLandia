@@ -84,8 +84,10 @@ body {
     font-size: 1.0em; /* Aumenta el tamaño del texto */
     padding: 3px; /* Aumenta el espacio interno */
     width: auto; /* Ajusta el ancho automáticamente o cámbialo a un valor fijo */
-    height: 35px; /* Ajusta la altura del selector */
     border-radius: 5px;
+    overflow-y: auto; 
+    height: auto;
+    margin-bottom: -31px;
   }
   
   .selector{
