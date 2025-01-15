@@ -12,7 +12,7 @@ body {
   
   #main-content {
     width: 97%;
-    min-height: calc(100vh - 120px); /* Suponiendo que header y footer juntos miden 120px */
+    min-height: calc(100vh - 120px); 
     background-image: url('images_animadas/consolandia.png'); 
     background-size: cover;
     background-position: center;
@@ -20,16 +20,19 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    
-  }
-  
-  .contenido-opaco {
-    width: 35%; /* Ajusta el tamaño del contenedor */
+    overflow: hidden; /* Oculta desbordamientos inesperados */
+}
+
+.contenido-opaco {
+    width: 35%;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.7); /* Blanco con opacidad */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Sombra elegante */
-  }
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    max-width: 600px; /* Limita el tamaño máximo */
+    max-height: 186vh; /* Limita la altura respecto al viewport */
+    overflow-y: auto; /* Habilita el scroll en caso necesario */
+}
   
   .selector,
   .resultado,
@@ -42,6 +45,7 @@ body {
   header {
     background-color: #b7e0f8;
     padding: 0px;
+   
   }
   
   header h1 {
@@ -49,6 +53,7 @@ body {
     font-weight: bold;
     font-size: 36px;
     margin-top: 0px;
+    text-shadow: rgba(54,224,108,0.9) 0px 0px 33px; 
   }
   header p {
     font-size: 1.5rem;
@@ -93,13 +98,11 @@ body {
     font-family: monospace;
   }
   #imagen-palabra {
-    width: 150px; /* Ancho de la imagen */
-    height: auto; /* Mantiene la proporción */
-    display: block; /* Asegura que se comporte como un bloque */
-    margin: 10px auto; /* Centra la imagen horizontalmente */
-    font-size: 2rem;
+    max-width: 100%; /* La imagen no será más ancha que el contenedor */
+    max-height: 100px; /* Define un tamaño máximo razonable */
+    object-fit: contain; /* Mantiene las proporciones de la imagen */
+}
   
-  }
   .resultado p {
     font-size: 1.5rem;
     margin-bottom: 10px;
@@ -152,6 +155,7 @@ body {
     padding: 1px;
     font-size: 1.5rem;
     font-weight: bold;
+    text-shadow: rgba(54,224,108,0.9) 0px 0px 33px; 
   }
   
   @media (max-width: 768px) {
