@@ -11,7 +11,7 @@ body {
   }
   
   #main-content {
-    width: 100%;
+    width: 97%;
     min-height: calc(100vh - 120px); /* Suponiendo que header y footer juntos miden 120px */
     background-image: url('images_animadas/consolandia.png'); 
     background-size: cover;
@@ -20,14 +20,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    
   }
   
   .contenido-opaco {
     width: 35%; /* Ajusta el tamaño del contenedor */
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8); /* Blanco con opacidad */
+    background-color: rgba(255, 255, 255, 0.7); /* Blanco con opacidad */
     border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Sombra elegante */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Sombra elegante */
   }
   
   .selector,
@@ -122,6 +123,13 @@ body {
     line-height: 53px; /* Igual al valor de la altura */
   }
   
+  #puntuacion {
+    font-size: 24px; /* Tamaño del texto */
+    font-weight: bold; /* Negrita */
+    color: #ff0000; /* Cambia el color (rojo en este caso) */
+    text-align: center; /* Centra el texto */
+    margin-top: 20px; /* Espacio superior */
+  }
   
   button {
     background-color: #4caf50;
@@ -189,6 +197,7 @@ img {
     margin-top: 20px;
     font-size: 1.5em;
     color: red;
+    font-weight: bold;
   }
   /* Estilo del fondo del modal */
 .modal {

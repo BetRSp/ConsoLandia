@@ -159,10 +159,19 @@ function mostrarModal(mensaje, emoji = "") {
   const palabraOrdenada = letrasContenedor.map((span) => span.textContent).join("").toLowerCase(); // Convertir a minúsculas
   const textoEscrito = document.getElementById("area-escritura").value.trim().toLowerCase(); // Convertir a minúsculas
 
-  console.log("Palabra Actual:", palabraActual);
-  console.log("Palabra Correcta:", palabraCorrecta);
-  console.log("Palabra Ordenada:", palabraOrdenada);
-  console.log("Texto Escrito:", textoEscrito);
+  // Función para eliminar acentos
+  function eliminarTildes(cadena) {
+    return cadena.normalize("NFD").replace(/[\u0300-\u036f]/g, ""); // Elimina caracteres diacríticos
+  }
+
+  // Normalizar las palabras para eliminar tildes
+  const palabraCorrectaSinTildes = eliminarTildes(palabraCorrecta);
+  const palabraOrdenadaSinTildes = eliminarTildes(palabraOrdenada);
+  const textoEscritoSinTildes = eliminarTildes(textoEscrito);
+
+  console.log("Palabra Correcta (sin tildes):", palabraCorrectaSinTildes);
+  console.log("Palabra Ordenada (sin tildes):", palabraOrdenadaSinTildes);
+  console.log("Texto Escrito (sin tildes):", textoEscritoSinTildes);
 
   // Nueva validación para verificar si el textarea está vacío
   if (textoEscrito === "") {
@@ -170,22 +179,23 @@ function mostrarModal(mensaje, emoji = "") {
     return; // Detener ejecución si el textarea está vacío
   }
 
-  if (palabraOrdenada === palabraCorrecta && textoEscrito === palabraCorrecta) {
-      if (!palabraVerificada) {
-          puntuacion += 1;
-          document.getElementById("puntuacion").textContent = `Puntuación: ${puntuacion}`;
-          mostrarModal("¡Correcto! ¡Bien hecho! 🎉", "✅");
-          palabraVerificada = true;
-          pausarTemporizador();
-      } else {
-          mostrarModal("Esta palabra ya fue verificada.", "ℹ️");
-      }
-  } else if (textoEscrito !== palabraCorrecta) {
-      mostrarModal("La palabra escrita no coincide con la generada. Inténtalo de nuevo.", "✍️");
-  } else if (palabraOrdenada !== palabraCorrecta) {
-      mostrarModal("El orden de las letras no es correcto. Inténtalo de nuevo.", "🔠");
+  if (palabraOrdenadaSinTildes === palabraCorrectaSinTildes && textoEscritoSinTildes === palabraCorrectaSinTildes) {
+    if (!palabraVerificada) {
+      puntuacion += 5;
+      document.getElementById("puntuacion").textContent = `Puntuación: ${puntuacion}`;
+      mostrarModal("¡Correcto! ¡Bien hecho! 🎉", "✅");
+      palabraVerificada = true;
+      pausarTemporizador();
+    } else {
+      mostrarModal("Esta palabra ya fue verificada.", "ℹ️");
+    }
+  } else if (textoEscritoSinTildes !== palabraCorrectaSinTildes) {
+    mostrarModal("La palabra escrita no coincide con la generada. Inténtalo de nuevo.", "✍️");
+  } else if (palabraOrdenadaSinTildes !== palabraCorrectaSinTildes) {
+    mostrarModal("El orden de las letras no es correcto. Inténtalo de nuevo.", "🔠");
   }
 });
+
 
 // Nueva función para reiniciar el juego
 function reiniciarJuego() {
