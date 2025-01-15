@@ -11,49 +11,50 @@
     <h1>¡Aprende Consonantes!</h1>
     <p>Selecciona una consonante y practica escribiendo</p>
   </header>
-  <main>
+  <main id="main-content">
+    <div class="contenido-opaco">
     <div class="selector">
-        <label for="consonante" id="label-consonante">Elige una consonante:</label>
-      <select id="consonante">
-        <option value="B">B</option>
-        <option value="C">C</option>
-        <option value="D">D</option>
-        <option value="S">S</option>
-        <option value="L">L</option>
-        <option value="M">M</option>
-        <option value="P">P</option>
-      </select>
-      <br>
-      <button id="generar-palabra">Generar Palabra</button>
+      <label for="consonante" id="label-consonante">Elige una consonante:</label>
+    <select id="consonante">
+      <option value="B">B</option>
+      <option value="C">C</option>
+      <option value="D">D</option>
+      <option value="S">S</option>
+      <option value="L">L</option>
+      <option value="M">M</option>
+      <option value="P">P</option>
+    </select>
+    <br>
+    <button id="generar-palabra">Generar Palabra</button>
+  </div>
+  <div class="resultado">
+    <p>Tu palabra es:</p>
+    <h2 id="palabra"></h2>
+    <img id="imagen-palabra" alt=" ">
+    <button id="reproducir-audio">Escuchar Palabra</button>
+  </div>
+  <div class="practica">
+      <p>Intenta escribir la palabra:</p>
+      <textarea id="area-escritura" placeholder="Escribe aquí..."></textarea>
+      <p id="puntuacion">Puntuación: 0</p>
     </div>
-    <div class="resultado">
-      <p>Tu palabra es:</p>
-      <h2 id="palabra"></h2>
-      <img id="imagen-palabra" alt=" ">
-      <button id="reproducir-audio">Escuchar Palabra</button>
+    
+  <div class="temporizador">
+      <p>Tiempo restante: <span id="tiempo-restante"></span></p>
+      <p id="mensaje-temporizador"></p>
     </div>
-    <div class="practica">
-        <p>Intenta escribir la palabra:</p>
-        <textarea id="area-escritura" placeholder="Escribe aquí..."></textarea>
-        <p id="puntuacion">Puntuación: 0</p>
-      </div>
-      
-    <div class="temporizador">
-        <p>Tiempo restante: <span id="tiempo-restante"></span></p>
-        <p id="mensaje-temporizador"></p>
-      </div>
-      
-    <div class="juego">
-      <p>Ordena las letras para formar la palabra:</p>
-      <div id="letras-contenedor"></div>
-      <button id="verificar-orden">Verificar</button>
+    
+  <div class="juego">
+    <p>Ordena las letras para formar la palabra:</p>
+    <div id="letras-contenedor"></div>
+    <button id="verificar-orden">Verificar</button>
+  </div>
+  <div id="modal-alerta" class="modal">
+    <div class="modal-contenido">
+      <span id="cerrar-modal" class="cerrar">&times;</span>
+      <p id="mensaje-modal"></p>
     </div>
-    <div id="modal-alerta" class="modal">
-      <div class="modal-contenido">
-        <span id="cerrar-modal" class="cerrar">&times;</span>
-        <p id="mensaje-modal"></p>
-      </div>
-    </div>    
+  </div>    
   </main>
   <footer>
     <p>¡Diviértete aprendiendo!</p>

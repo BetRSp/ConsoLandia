@@ -5,6 +5,37 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  #main-content {
+    width: 100%;
+    min-height: calc(100vh - 120px); /* Suponiendo que header y footer juntos miden 120px */
+    background-image: url('images_animadas/consolandia.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .contenido-opaco {
+    width: 35%; /* Ajusta el tamaño del contenedor */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Blanco con opacidad */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Sombra elegante */
+  }
+  
+  .selector,
+  .resultado,
+  .practica,
+  .temporizador,
+  .juego {
+    margin-bottom: 20px;
   }
   
   header {
@@ -46,7 +77,7 @@ body {
   #label-consonante {
     font-size: 33px;
     font-family: monospace;
-    
+    padding: 3px;
   }
   #label{
     font-size: 1.0em; /* Ajusta el tamaño de la fuente */
@@ -77,12 +108,20 @@ body {
     margin-bottom: 2px;
 }
   textarea {
-    width: 410px;
+    width: 281px;
     height: 53px;
     font-size: 3.2em;
     text-align: center;
 
   }
+  
+  #area-escritura::placeholder {
+    font-size: 28px; /* Tamaño del texto */
+    color: #888; /* Color del texto */
+    text-align: center; /* Centrar horizontalmente el texto del placeholder */
+    line-height: 53px; /* Igual al valor de la altura */
+  }
+  
   
   button {
     background-color: #4caf50;
@@ -110,10 +149,6 @@ body {
   @media (max-width: 768px) {
     main {
       padding: 10px;
-    }
-  
-    textarea {
-      font-size: 1em;
     }
   }
   
