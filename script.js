@@ -26,17 +26,17 @@ const palabrasPorConsonante = {
     },
     F: {
       palabras: ["Foca", "Faro", "Flor", "Fuego", "Falda", "Foco", "Fogata"],
-      imagenes: ["images_animadas/banana.jpg", "images_animadas/barco.jpg", "images_animadas/bola.jpg", "images_animadas/bote.jpg", "images_animadas/burro.jpg", "images_animadas/ballena.jpg"],
+      imagenes: ["images_animadas/foca.png", "images_animadas/faro.png", "images_animadas/flor.png", "images_animadas/fuego.png", "images_animadas/falda.png", "images_animadas/foco.png", "images_animadas/fogata.png"],
       audios: ["banana.mp3", "barco.mp3", "bola.mp3"],
     },
     G: {
       palabras: ["Gato", "Gorrila", "Galleta", "Guante", "Guitarra", "Gorro", "Grillo"],
-      imagenes: ["images_animadas/banana.jpg", "images_animadas/barco.jpg", "images_animadas/bola.jpg", "images_animadas/bote.jpg", "images_animadas/burro.jpg", "images_animadas/ballena.jpg"],
+      imagenes: ["images_animadas/gato.png", "images_animadas/gorrila.png", "images_animadas/galleta.png", "images_animadas/guante.png", "images_animadas/guitarra.png", "images_animadas/gorro.png", "images_animadas/grillo.png"],
       audios: ["banana.mp3", "barco.mp3", "bola.mp3"],
     },
     H: {
       palabras: ["Hielo", "Hueco", "Hormiga", "Hongo", "Hada", "Helado", "Hacha"],
-      imagenes: ["images_animadas/banana.jpg", "images_animadas/barco.jpg", "images_animadas/bola.jpg", "images_animadas/bote.jpg", "images_animadas/burro.jpg", "images_animadas/ballena.jpg"],
+      imagenes: ["images_animadas/hielo.png", "images_animadas/hueco.png", "images_animadas/hormiga.png", "images_animadas/hongo.png", "images_animadas/hada.png", "images_animadas/helado.png", "images_animadas/hacha.png"],
       audios: ["banana.mp3", "barco.mp3", "bola.mp3"],
     },
     I: {
