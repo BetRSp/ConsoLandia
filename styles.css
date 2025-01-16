@@ -114,7 +114,7 @@ body {
   }
   #imagen-palabra {
     max-width: 100%; /* La imagen no será más ancha que el contenedor */
-    max-height: 100px; /* Define un tamaño máximo razonable */
+    max-height: 128px; /* Define un tamaño máximo razonable */
     object-fit: contain; /* Mantiene las proporciones de la imagen */
 }
   

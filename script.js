@@ -1,4 +1,9 @@
 const palabrasPorConsonante = {
+     A: {
+    palabras: ["Antonella", "Avión", "Abeja", "Araña", "Anillo", "Arcoíris", "Arbol", "Auto"],
+    imagenes: ["images_animadas/Anto.png", "images_animadas/avion.png", "images_animadas/abeja.png", "images_animadas/araña.png", "images_animadas/anillo.png", "images_animadas/arcoiris.png","images_animadas/arbol.png", "images_animadas/auto.png"],
+    audios: ["banana.mp3", "barco.mp3", "bola.mp3"],
+    }, 
     B: {
       palabras: ["Banana", "Barco", "Bola", "Bote", "Burro", "Ballena"],
       imagenes: ["images_animadas/banana.jpg", "images_animadas/barco.jpg", "images_animadas/bola.jpg", "images_animadas/bote.jpg", "images_animadas/burro.jpg", "images_animadas/ballena.jpg"],
@@ -14,34 +19,125 @@ const palabrasPorConsonante = {
       imagenes: ["images_animadas/dado.jpg", "images_animadas/delfin.jpg", "images_animadas/dia.jpg", "images_animadas/dedo.jpg", "images_animadas/diente.jpg","images_animadas/diamantes.jpg"],
       audios: ["dado.mp3", "delfin.mp3", "dia.mp3"],
     },
+    E: {
+      palabras: ["Elefante", "Enano", "Estrella", "Escalera", "Espejo", "Escoba", "Escudo"],
+      imagenes: ["images_animadas/elefante.png", "images_animadas/enano.png", "images_animadas/estrella.png", "images_animadas/escalera.png", "images_animadas/espejo.png", "images_animadas/escoba.png", "images_animadas/escudo.png"],
+      audios: ["banana.mp3", "barco.mp3", "bola.mp3"],
+    },
+    F: {
+      palabras: ["Foca", "Faro", "Flor", "Fuego", "Falda", "Foco", "Fogata"],
+      imagenes: ["images_animadas/banana.jpg", "images_animadas/barco.jpg", "images_animadas/bola.jpg", "images_animadas/bote.jpg", "images_animadas/burro.jpg", "images_animadas/ballena.jpg"],
+      audios: ["banana.mp3", "barco.mp3", "bola.mp3"],
+    },
+    G: {
+      palabras: ["Gato", "Gorrila", "Galleta", "Guante", "Guitarra", "Gorro", "Grillo"],
+      imagenes: ["images_animadas/banana.jpg", "images_animadas/barco.jpg", "images_animadas/bola.jpg", "images_animadas/bote.jpg", "images_animadas/burro.jpg", "images_animadas/ballena.jpg"],
+      audios: ["banana.mp3", "barco.mp3", "bola.mp3"],
+    },
+    H: {
+      palabras: ["Hielo", "Hueco", "Hormiga", "Hongo", "Hada", "Helado", "Hacha"],
+      imagenes: ["images_animadas/banana.jpg", "images_animadas/barco.jpg", "images_animadas/bola.jpg", "images_animadas/bote.jpg", "images_animadas/burro.jpg", "images_animadas/ballena.jpg"],
+      audios: ["banana.mp3", "barco.mp3", "bola.mp3"],
+    },
+    I: {
+      palabras: ["Indio", "Iglesia", "Iman", "Isla", "Iguana", "Invierno", "Iglú"],
+      imagenes: ["images_animadas/banana.jpg", "images_animadas/barco.jpg", "images_animadas/bola.jpg", "images_animadas/bote.jpg", "images_animadas/burro.jpg", "images_animadas/ballena.jpg"],
+      audios: ["banana.mp3", "barco.mp3", "bola.mp3"],
+    },
+    J: {
+      palabras: ["Jardin", "Japón", "Juego", "Jirafa", "Joyas", "Jugo", "Jabalí"],
+      imagenes: ["images_animadas/banana.jpg", "images_animadas/barco.jpg", "images_animadas/bola.jpg", "images_animadas/bote.jpg", "images_animadas/burro.jpg", "images_animadas/ballena.jpg"],
+      audios: ["banana.mp3", "barco.mp3", "bola.mp3"],
+    },
+    K: {
+      palabras: ["Karate", "Kilo", "Koala", "Kiosco", "KaraoKe", "Kwi", "Kétchup"],
+      imagenes: ["images_animadas/banana.jpg", "images_animadas/barco.jpg", "images_animadas/bola.jpg", "images_animadas/bote.jpg", "images_animadas/burro.jpg", "images_animadas/ballena.jpg"],
+      audios: ["banana.mp3", "barco.mp3", "bola.mp3"],
+    },
+    L: {
+      palabras: ["Loma", "Lima", "Lola", "Lupa", "Lobo", "limón"],
+      imagenes: ["images_animadas/loma.jpg.png", "images_animadas/lima.jpg", "images_animadas/lola.jpg", "images_animadas/lupa.jpg", "images_animadas/lobo.jpg", "images_animadas/limon.jpg"],
+      audios: ["dado.mp3", "delfin.mp3", "dia.mp3"],
+    },
+    M: {
+      palabras: ["Mamá", "Mimo", "Mima", "Momia","Misa","Masa", "Matias"],
+      imagenes: ["images_animadas/mama.jpg", "images_animadas/mimo.jpg.jpeg", "images_animadas/mima.jpg","images_animadas/momia.jpg", "images_animadas/misa.jpg", "images_animadas/masa.jpg","images_animadas/matias.jpg.png"],
+      audios: ["dado.mp3", "delfin.mp3", "dia.mp3"],
+    },
+    N: {
+      palabras: ["Nido", "Nariz", "Noche", "Navidad", "Naranja","Niña", "Naipe"],
+      imagenes: ["images_animadas/papa.jpg", "images_animadas/pila.jpg", "images_animadas/pomo.jpg", "images_animadas/puma.jpg", "images_animadas/pito.jpg", "images_animadas/pipa.jpg"],
+      audios: ["Papa.mp3", "Pila.mp3", "Pomo.mp3"],
+    },
+    O: {
+      palabras: ["Oso", "Ojo", "Oreja", "Ola", "Olla", "Ocho", "Oveja", "Ovni"],
+      imagenes: ["images_animadas/papa.jpg", "images_animadas/pila.jpg", "images_animadas/pomo.jpg", "images_animadas/puma.jpg", "images_animadas/pito.jpg", "images_animadas/pipa.jpg"],
+      audios: ["Papa.mp3", "Pila.mp3", "Pomo.mp3"],
+    },
+    P: {
+      palabras: ["Papá", "pila", "Pomo", "Puma", "Pito", "Pipa"],
+      imagenes: ["images_animadas/papa.jpg", "images_animadas/pila.jpg", "images_animadas/pomo.jpg", "images_animadas/puma.jpg", "images_animadas/pito.jpg", "images_animadas/pipa.jpg"],
+      audios: ["Papa.mp3", "Pila.mp3", "Pomo.mp3"],
+    },
+    Q: {
+      palabras: ["Queso", "Química", "Querubín", "Quince", "Quemar", "Quebrar"],
+      imagenes: ["images_animadas/papa.jpg", "images_animadas/pila.jpg", "images_animadas/pomo.jpg", "images_animadas/puma.jpg", "images_animadas/pito.jpg", "images_animadas/pipa.jpg"],
+      audios: ["Papa.mp3", "Pila.mp3", "Pomo.mp3"],
+    },
+    R: {
+      palabras: ["Ratón", "Reloj", "Robot", "Radio", "Rayo","Rana", "Reina"],
+      imagenes: ["images_animadas/papa.jpg", "images_animadas/pila.jpg", "images_animadas/pomo.jpg", "images_animadas/puma.jpg", "images_animadas/pito.jpg", "images_animadas/pipa.jpg"],
+      audios: ["Papa.mp3", "Pila.mp3", "Pomo.mp3"],
+    },
     S: {
       palabras: ["Sapo", "Sopa", "sol","suelo","Suma", "Samuel"],
       imagenes: ["images_animadas/sapo.jpg", "images_animadas/sopa.jpg", "images_animadas/sol.jpg", "images_animadas/suelo.jpg", "images_animadas/suma.jpg ", "images_animadas/samuel.jpg.png"],
       audios: ["dado.mp3", "delfin.mp3", "dia.mp3"],
     },
-    L: {
-      palabras: ["Loma", "Lima", "Lola", "Lupa", "Lobo","limón"],
-      imagenes: ["images_animadas/loma.jpg.png", "images_animadas/lima.jpg", "images_animadas/lola.jpg", "images_animadas/lupa.jpg", "images_animadas/lobo.jpg", "images_animadas/limon.jpg"],
-      audios: ["dado.mp3", "delfin.mp3", "dia.mp3"],
-    },
-    P: {
-      palabras: ["Papá", "pila", "Pomo", "Puma", "Pito","Pipa"],
+    T: {
+      palabras: ["Tetero", "Tomate", "Tiburón", "Tortuga", "Tambor", "Tenedor"],
       imagenes: ["images_animadas/papa.jpg", "images_animadas/pila.jpg", "images_animadas/pomo.jpg", "images_animadas/puma.jpg", "images_animadas/pito.jpg", "images_animadas/pipa.jpg"],
       audios: ["Papa.mp3", "Pila.mp3", "Pomo.mp3"],
     },
-    M: {
-      palabras: ["Mamá", "Mimo", "Mima", "Momia","Misa","Masa","Matias"],
-      imagenes: ["images_animadas/mama.jpg", "images_animadas/mimo.jpg.jpeg", "images_animadas/mima.jpg","images_animadas/momia.jpg", "images_animadas/misa.jpg", "images_animadas/masa.jpg","images_animadas/matias.jpg.png"],
-      audios: ["dado.mp3", "delfin.mp3", "dia.mp3"],
+    U: {
+      palabras: ["Uva", "Uña", "Uno", "Unicornio", "Universo", "Uniforme", "Urraca"],
+      imagenes: ["images_animadas/papa.jpg", "images_animadas/pila.jpg", "images_animadas/pomo.jpg", "images_animadas/puma.jpg", "images_animadas/pito.jpg", "images_animadas/pipa.jpg"],
+      audios: ["Papa.mp3", "Pila.mp3", "Pomo.mp3"],
     },
+    V: {
+      palabras: ["Volcán", "Voleibol", "Vampiro", "Violín", "Vikingo", "Veinte", "Verano"],
+      imagenes: ["images_animadas/papa.jpg", "images_animadas/pila.jpg", "images_animadas/pomo.jpg", "images_animadas/puma.jpg", "images_animadas/pito.jpg", "images_animadas/pipa.jpg"],
+      audios: ["Papa.mp3", "Pila.mp3", "Pomo.mp3"],
+    },
+    W: {
+      palabras: ["Waffle", "Web", "Wifi", "Whisky", "Waterpolo", "Walkman"],
+      imagenes: ["images_animadas/papa.jpg", "images_animadas/pila.jpg", "images_animadas/pomo.jpg", "images_animadas/puma.jpg", "images_animadas/pito.jpg", "images_animadas/pipa.jpg"],
+      audios: ["Papa.mp3", "Pila.mp3", "Pomo.mp3"],
+    },
+    X: {
+      palabras: ["Xilófono", "Xilófago", "Xenón", "Xiomara", "Xilócopo", "Xerófilo"],
+      imagenes: ["images_animadas/papa.jpg", "images_animadas/pila.jpg", "images_animadas/pomo.jpg", "images_animadas/puma.jpg", "images_animadas/pito.jpg", "images_animadas/pipa.jpg"],
+      audios: ["Papa.mp3", "Pila.mp3", "Pomo.mp3"],
+    },
+    Y: {
+      palabras: ["Yate", "Yeso", "Yegua", "Yema", "Yogurt", "Yunque"],
+      imagenes: ["images_animadas/papa.jpg", "images_animadas/pila.jpg", "images_animadas/pomo.jpg", "images_animadas/puma.jpg", "images_animadas/pito.jpg", "images_animadas/pipa.jpg"],
+      audios: ["Papa.mp3", "Pila.mp3", "Pomo.mp3"],
+    },
+    Z: {
+      palabras: ["Zorro", "Zombi", "Zorrillo", "Zoológico", "Zanahoria", "Zapato"],
+      imagenes: ["images_animadas/papa.jpg", "images_animadas/pila.jpg", "images_animadas/pomo.jpg", "images_animadas/puma.jpg", "images_animadas/pito.jpg", "images_animadas/pipa.jpg"],
+      audios: ["Papa.mp3", "Pila.mp3", "Pomo.mp3"],
+    },
+   
   };
   
   let puntuacion = 0;
-  let palabraVerificada = false; // Nueva bandera para evitar puntuación duplicada
-  let palabraActual = ""; // Inicializar palabraActual como una cadena vacía
+  let palabraVerificada = false; 
+  let palabraActual = ""; 
   let temporizadorIntervalo;
-  let tiempoRestante = 60; // Tiempo inicial en segundos
-  let temporizadorCorriendo = false; // Bandera para el temporizador
+  let tiempoRestante = 60; 
+  let temporizadorCorriendo = false; 
   
 
 // Botón Generar Palabra
@@ -56,8 +152,8 @@ document.getElementById("generar-palabra").addEventListener("click", () => {
   const { palabras, imagenes, audios } = palabrasPorConsonante[consonante];
   const index = Math.floor(Math.random() * palabras.length);
 
-  const palabra = palabras[index]; // Asignar palabra
-  palabraActual = palabra; // Asignar palabra a palabraActual
+  const palabra = palabras[index]; 
+  palabraActual = palabra; 
   document.getElementById("palabra").textContent = palabra;
   document.getElementById("imagen-palabra").src = imagenes[index];
   document.getElementById("imagen-palabra").alt = palabra;
@@ -66,7 +162,7 @@ document.getElementById("generar-palabra").addEventListener("click", () => {
   cargarJuego(palabra);
   desbloquearInteracciones();
 
-  palabraVerificada = false; // Restablecer la bandera para la nueva palabra
+  palabraVerificada = false; 
 
 
   // Limpiar el contenido del textarea
@@ -88,6 +184,7 @@ document.getElementById("generar-palabra").addEventListener("click", () => {
   function cargarJuego(palabra) {
     const contenedor = document.getElementById("letras-contenedor");
     contenedor.innerHTML = "";
+
     // Crear las letras desordenadas
     const letras = palabra.split("").sort(() => Math.random() - 0.5);
     letras.forEach((letra) => {
@@ -104,11 +201,11 @@ document.getElementById("generar-palabra").addEventListener("click", () => {
     });
   }
   
-  // Variable global para almacenar la letra arrastrada
+
   let letraArrastrada = null;
   
   function dragStart(e) {
-    letraArrastrada = e.target; // Guardar el elemento arrastrado
+    letraArrastrada = e.target; 
     e.target.classList.add("dragging");
   }
   
@@ -119,7 +216,7 @@ document.getElementById("generar-palabra").addEventListener("click", () => {
   function drop(e) {
     e.preventDefault();
   
-    const letraSoltada = e.target; // Elemento sobre el que se suelta
+    const letraSoltada = e.target; 
   
     // Intercambiar letras
     if (letraArrastrada && letraArrastrada !== letraSoltada) {
@@ -127,8 +224,8 @@ document.getElementById("generar-palabra").addEventListener("click", () => {
       letraArrastrada.textContent = letraSoltada.textContent;
       letraSoltada.textContent = temp;
   
-      letraArrastrada.classList.remove("dragging"); // Eliminar la clase de arrastrar
-      letraArrastrada = null; // Resetear
+      letraArrastrada.classList.remove("dragging"); 
+      letraArrastrada = null; 
     }
   }
   // Función para mostrar el modal con mensaje personalizado
@@ -154,14 +251,14 @@ function mostrarModal(mensaje, emoji = "") {
 
  // Verificar Orden
  document.getElementById("verificar-orden").addEventListener("click", () => {
-  const palabraCorrecta = document.getElementById("palabra").textContent.trim().toLowerCase(); // Convertir a minúsculas
+  const palabraCorrecta = document.getElementById("palabra").textContent.trim().toLowerCase(); 
   const letrasContenedor = Array.from(document.getElementById("letras-contenedor").children);
-  const palabraOrdenada = letrasContenedor.map((span) => span.textContent).join("").toLowerCase(); // Convertir a minúsculas
-  const textoEscrito = document.getElementById("area-escritura").value.trim().toLowerCase(); // Convertir a minúsculas
+  const palabraOrdenada = letrasContenedor.map((span) => span.textContent).join("").toLowerCase(); 
+  const textoEscrito = document.getElementById("area-escritura").value.trim().toLowerCase(); 
 
   // Función para eliminar acentos
   function eliminarTildes(cadena) {
-    return cadena.normalize("NFD").replace(/[\u0300-\u036f]/g, ""); // Elimina caracteres diacríticos
+    return cadena.normalize("NFD").replace(/[\u0300-\u036f]/g, ""); 
   }
 
   // Normalizar las palabras para eliminar tildes
@@ -176,7 +273,7 @@ function mostrarModal(mensaje, emoji = "") {
   // Nueva validación para verificar si el textarea está vacío
   if (textoEscrito === "") {
     mostrarModal("Debes escribir la palabra generada antes de verificar.", "📝");
-    return; // Detener ejecución si el textarea está vacío
+    return; 
   }
 
   if (palabraOrdenadaSinTildes === palabraCorrectaSinTildes && textoEscritoSinTildes === palabraCorrectaSinTildes) {
@@ -197,30 +294,29 @@ function mostrarModal(mensaje, emoji = "") {
 });
 
 
-// Nueva función para reiniciar el juego
+//Función para reiniciar el juego
 function reiniciarJuego() {
-  // Restablecer variables y elementos de la interfaz
-  tiempoRestante = 60; // Restablecer tiempo inicial
-  puntuacion = 0; // Restablecer puntuación
-  palabraVerificada = false; // Restablecer bandera de palabra verificada
-  temporizadorCorriendo = false; // Asegurar que el temporizador no inicie
-  clearInterval(temporizadorIntervalo); // Detener cualquier temporizador existente
+  tiempoRestante = 60; 
+  puntuacion = 0; 
+  palabraVerificada = false; 
+  temporizadorCorriendo = false; 
+  clearInterval(temporizadorIntervalo); 
 
   document.getElementById("puntuacion").textContent = `Puntuación: ${puntuacion}`;
   document.getElementById("mensaje-temporizador").textContent = "";
   document.getElementById("tiempo-restante").textContent = tiempoRestante;
-  document.getElementById("palabra").textContent = ""; // Limpiar palabra actual
-  document.getElementById("letras-contenedor").innerHTML = ""; // Limpiar letras
-  document.getElementById("area-escritura").value = ""; // Limpiar textarea
-  document.getElementById("imagen-palabra").src = ""; // Limpiar imagen
-  document.getElementById("imagen-palabra").alt = ""; // Limpiar texto alternativo
+  document.getElementById("palabra").textContent = ""; 
+  document.getElementById("letras-contenedor").innerHTML = ""; 
+  document.getElementById("area-escritura").value = ""; 
+  document.getElementById("imagen-palabra").src = ""; 
+  document.getElementById("imagen-palabra").alt = ""; 
 
-  desbloquearInteracciones(); // Habilitar interacciones
+  desbloquearInteracciones(); 
 }
 
  // Temporizador
 function iniciarTemporizador() {
-  temporizadorCorriendo = true; // Marcar que el temporizador está corriendo
+  temporizadorCorriendo = true; 
   document.getElementById("tiempo-restante").textContent = tiempoRestante;
   document.getElementById("mensaje-temporizador").textContent = "";
 
@@ -230,11 +326,11 @@ function iniciarTemporizador() {
     document.getElementById("tiempo-restante").textContent = tiempoRestante;
 
     if (tiempoRestante <= 0) {
-      clearInterval(temporizadorIntervalo); // Detener el temporizador
+      clearInterval(temporizadorIntervalo); 
       document.getElementById("mensaje-temporizador").textContent =
         `¡Tiempo agotado! Puntuación final: ${puntuacion}`;
-      bloquearInteracciones(); // Bloquear interacciones al finalizar
-      temporizadorCorriendo = false; // Resetear la bandera
+      bloquearInteracciones(); 
+      temporizadorCorriendo = false; 
       mostrarModal("¡Tiempo agotado! ¿Quieres jugar de nuevo?  ", "⏰",);
 
       // Agregar opción para reiniciar el juego
@@ -251,23 +347,23 @@ function iniciarTemporizador() {
 }
   
   function pausarTemporizador() {
-    clearInterval(temporizadorIntervalo); // Detiene el intervalo del temporizador
-    temporizadorCorriendo = false; // Actualiza la bandera
+    clearInterval(temporizadorIntervalo); 
+    temporizadorCorriendo = false; 
   }
   
   function desbloquearInteracciones() {
     document.querySelectorAll("#letras-contenedor span").forEach((span) => {
       span.draggable = true;
     });
-    document.getElementById("verificar-orden").disabled = false; // Habilitar verificar
-    document.getElementById("generar-palabra").disabled = false; // Habilitar generar
+    document.getElementById("verificar-orden").disabled = false; 
+    document.getElementById("generar-palabra").disabled = false; 
   }
   
   function bloquearInteracciones() {
     document.querySelectorAll("#letras-contenedor span").forEach((span) => {
       span.draggable = false;
     });
-    document.getElementById("verificar-orden").disabled = true; // Bloquear verificar
-    document.getElementById("generar-palabra").disabled = true; // Bloquear generar
+    document.getElementById("verificar-orden").disabled = true; 
+    document.getElementById("generar-palabra").disabled = true; 
   }
   
