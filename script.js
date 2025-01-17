@@ -41,12 +41,12 @@ const palabrasPorConsonante = {
     },
     I: {
       palabras: ["Indio", "Iglesia", "Iman", "Isla", "Iguana", "Invierno", "Iglú"],
-      imagenes: ["images_animadas/banana.jpg", "images_animadas/barco.jpg", "images_animadas/bola.jpg", "images_animadas/bote.jpg", "images_animadas/burro.jpg", "images_animadas/ballena.jpg"],
+      imagenes: ["images_animadas/indio.png", "images_animadas/iglesia.png", "images_animadas/iman.png", "images_animadas/isla.png", "images_animadas/iguana.png", "images_animadas/invierno.jpeg", "images_animadas/iglu.png"],
       audios: ["banana.mp3", "barco.mp3", "bola.mp3"],
     },
     J: {
-      palabras: ["Jardin", "Japón", "Juego", "Jirafa", "Joyas", "Jugo", "Jabalí"],
-      imagenes: ["images_animadas/banana.jpg", "images_animadas/barco.jpg", "images_animadas/bola.jpg", "images_animadas/bote.jpg", "images_animadas/burro.jpg", "images_animadas/ballena.jpg"],
+      palabras: ["Jardin", "Japón", "Juguetes", "Jirafa", "Joya", "Jugo", "Jabalí"],
+      imagenes: ["images_animadas/jardin.png", "images_animadas/japon.png", "images_animadas/juguetes.png", "images_animadas/jirafa.png", "images_animadas/joya.png", "images_animadas/jugo.png", "images_animadas/jabali.png"],
       audios: ["banana.mp3", "barco.mp3", "bola.mp3"],
     },
     K: {
