@@ -51,7 +51,7 @@ const palabrasPorConsonante = {
     },
     K: {
       palabras: ["Karate", "Kilo", "Koala", "Kiosco", "KaraoKe", "Kwi", "Kétchup"],
-      imagenes: ["images_animadas/banana.jpg", "images_animadas/barco.jpg", "images_animadas/bola.jpg", "images_animadas/bote.jpg", "images_animadas/burro.jpg", "images_animadas/ballena.jpg"],
+      imagenes: ["images_animadas/karate.png", "images_animadas/kilo.png", "images_animadas/koala.png", "images_animadas/kiosco.png", "images_animadas/karaoke.jpeg", "images_animadas/kwi.png", "images_animadas/ketchup.png"],
       audios: ["banana.mp3", "barco.mp3", "bola.mp3"],
     },
     L: {
@@ -66,12 +66,12 @@ const palabrasPorConsonante = {
     },
     N: {
       palabras: ["Nido", "Nariz", "Noche", "Navidad", "Naranja","Niña", "Naipe"],
-      imagenes: ["images_animadas/papa.jpg", "images_animadas/pila.jpg", "images_animadas/pomo.jpg", "images_animadas/puma.jpg", "images_animadas/pito.jpg", "images_animadas/pipa.jpg"],
+      imagenes: ["images_animadas/nido.png", "images_animadas/nariz.png", "images_animadas/noche.jpeg", "images_animadas/navidad.png", "images_animadas/naranja.png", "images_animadas/niña.png", "images_animadas/naipe.png"],
       audios: ["Papa.mp3", "Pila.mp3", "Pomo.mp3"],
     },
     O: {
-      palabras: ["Oso", "Ojo", "Oreja", "Ola", "Olla", "Ocho", "Oveja", "Ovni"],
-      imagenes: ["images_animadas/papa.jpg", "images_animadas/pila.jpg", "images_animadas/pomo.jpg", "images_animadas/puma.jpg", "images_animadas/pito.jpg", "images_animadas/pipa.jpg"],
+      palabras: ["Oso", "Ojos", "Oreja", "Olas", "Olla", "Ocho", "Oveja", "Ovni"],
+      imagenes: ["images_animadas/oso.png", "images_animadas/ojos.png", "images_animadas/oreja.png", "images_animadas/olas.png", "images_animadas/olla.png", "images_animadas/ocho.png", "images_animadas/oveja.png", "images_animadas/ovni.png"],
       audios: ["Papa.mp3", "Pila.mp3", "Pomo.mp3"],
     },
     P: {
@@ -81,12 +81,12 @@ const palabrasPorConsonante = {
     },
     Q: {
       palabras: ["Queso", "Química", "Querubín", "Quince", "Quemar", "Quebrar"],
-      imagenes: ["images_animadas/papa.jpg", "images_animadas/pila.jpg", "images_animadas/pomo.jpg", "images_animadas/puma.jpg", "images_animadas/pito.jpg", "images_animadas/pipa.jpg"],
+      imagenes: ["images_animadas/queso.png", "images_animadas/quimica.png", "images_animadas/querubin.png", "images_animadas/quince.png", "images_animadas/quemar.png", "images_animadas/quebrar.png"],
       audios: ["Papa.mp3", "Pila.mp3", "Pomo.mp3"],
     },
     R: {
       palabras: ["Ratón", "Reloj", "Robot", "Radio", "Rayo","Rana", "Reina"],
-      imagenes: ["images_animadas/papa.jpg", "images_animadas/pila.jpg", "images_animadas/pomo.jpg", "images_animadas/puma.jpg", "images_animadas/pito.jpg", "images_animadas/pipa.jpg"],
+      imagenes: ["images_animadas/raton.png", "images_animadas/reloj.png", "images_animadas/radio.png", "images_animadas/rayo.png", "images_animadas/rana.png", "images_animadas/reina.png"],
       audios: ["Papa.mp3", "Pila.mp3", "Pomo.mp3"],
     },
     S: {
