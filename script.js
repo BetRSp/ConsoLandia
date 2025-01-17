@@ -71,7 +71,7 @@ const palabrasPorConsonante = {
     },
     Ñ: {
       palabras: ["Ñandú", "Ñoquis", "Ñoño", "Ñapa", "Ñame","Ñu", "Ñeque"],
-      imagenes: ["images_animadas/ñandu.png", "images_animadas/ñoquis.png", "images_animadas/ñoño.png", "images_animadas/ñapa.png", "images_animadas/ñame.png", "images_animadas/ñu.png", "images_animadas/ñeque.png.png"],
+      imagenes: ["images_animadas/ñandu.png", "images_animadas/ñoquis.png", "images_animadas/ñoño.png", "images_animadas/ñapa.png", "images_animadas/ñame.png", "images_animadas/ñu.png", "images_animadas/ñeque.png"],
       audios: ["Papa.mp3", "Pila.mp3", "Pomo.mp3"],
     },
     O: {
@@ -104,7 +104,7 @@ const palabrasPorConsonante = {
       imagenes: ["images_animadas/tetero.png", "images_animadas/tomate.png", "images_animadas/tiburon.png", "images_animadas/tortuga.png", "images_animadas/tambor.png", "images_animadas/tenedor.png"],
       audios: ["Papa.mp3", "Pila.mp3", "Pomo.mp3"],
     },
-    U: {
+    u: {
       palabras: ["Uva", "Uñas", "Uno", "Unicornio", "Universo", "Uniforme", "Urraca"],
       imagenes: ["images_animadas/uva.png", "images_animadas/uñas.png", "images_animadas/uno.png", "images_animadas/unicornio.png", "images_animadas/universo.jpeg", "images_animadas/uniforme.png", "images_animadas/urraca.png"],
       audios: ["Papa.mp3", "Pila.mp3", "Pomo.mp3"],
