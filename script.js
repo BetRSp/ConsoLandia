@@ -70,8 +70,8 @@ const palabrasPorConsonante = {
       audios: ["Papa.mp3", "Pila.mp3", "Pomo.mp3"],
     },
     Ñ: {
-      palabras: ["Nido", "Nariz", "Noche", "Navidad", "Naranja","Niña", "Naipe"],
-      imagenes: ["images_animadas/nido.png", "images_animadas/nariz.png", "images_animadas/noche.jpeg", "images_animadas/navidad.png", "images_animadas/naranja.png", "images_animadas/niña.png", "images_animadas/naipe.png"],
+      palabras: ["Ñandú", "Ñoquis", "Ñoño", "Ñapa", "Ñame","Ñu", "Ñeque"],
+      imagenes: ["images_animadas/ñandu.png", "images_animadas/ñoquis.png", "images_animadas/ñoño.png", "images_animadas/ñapa.png", "images_animadas/ñame.png", "images_animadas/ñu.png", "images_animadas/ñeque.png.png"],
       audios: ["Papa.mp3", "Pila.mp3", "Pomo.mp3"],
     },
     O: {
@@ -101,17 +101,17 @@ const palabrasPorConsonante = {
     },
     T: {
       palabras: ["Tetero", "Tomate", "Tiburón", "Tortuga", "Tambor", "Tenedor"],
-      imagenes: ["images_animadas/papa.jpg", "images_animadas/pila.jpg", "images_animadas/pomo.jpg", "images_animadas/puma.jpg", "images_animadas/pito.jpg", "images_animadas/pipa.jpg"],
+      imagenes: ["images_animadas/tetero.png", "images_animadas/tomate.png", "images_animadas/tiburon.png", "images_animadas/tortuga.png", "images_animadas/tambor.png", "images_animadas/tenedor.png"],
       audios: ["Papa.mp3", "Pila.mp3", "Pomo.mp3"],
     },
     U: {
-      palabras: ["Uva", "Uña", "Uno", "Unicornio", "Universo", "Uniforme", "Urraca"],
-      imagenes: ["images_animadas/papa.jpg", "images_animadas/pila.jpg", "images_animadas/pomo.jpg", "images_animadas/puma.jpg", "images_animadas/pito.jpg", "images_animadas/pipa.jpg"],
+      palabras: ["Uva", "Uñas", "Uno", "Unicornio", "Universo", "Uniforme", "Urraca"],
+      imagenes: ["images_animadas/uva.png", "images_animadas/uñas.png", "images_animadas/uno.png", "images_animadas/unicornio.png", "images_animadas/universo.jpeg", "images_animadas/uniforme.png", "images_animadas/urraca.png"],
       audios: ["Papa.mp3", "Pila.mp3", "Pomo.mp3"],
     },
     V: {
       palabras: ["Volcán", "Voleibol", "Vampiro", "Violín", "Vikingo", "Veinte", "Verano"],
-      imagenes: ["images_animadas/papa.jpg", "images_animadas/pila.jpg", "images_animadas/pomo.jpg", "images_animadas/puma.jpg", "images_animadas/pito.jpg", "images_animadas/pipa.jpg"],
+      imagenes: ["images_animadas/volcan.png", "images_animadas/voleibol.png", "images_animadas/vampiro.png", "images_animadas/violin.png", "images_animadas/vikingo.png", "images_animadas/veinte.png", "images_animadas/verano.jpg"],
       audios: ["Papa.mp3", "Pila.mp3", "Pomo.mp3"],
     },
     W: {
