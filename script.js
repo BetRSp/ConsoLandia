@@ -69,6 +69,11 @@ const palabrasPorConsonante = {
       imagenes: ["images_animadas/nido.png", "images_animadas/nariz.png", "images_animadas/noche.jpeg", "images_animadas/navidad.png", "images_animadas/naranja.png", "images_animadas/niña.png", "images_animadas/naipe.png"],
       audios: ["Papa.mp3", "Pila.mp3", "Pomo.mp3"],
     },
+    Ñ: {
+      palabras: ["Nido", "Nariz", "Noche", "Navidad", "Naranja","Niña", "Naipe"],
+      imagenes: ["images_animadas/nido.png", "images_animadas/nariz.png", "images_animadas/noche.jpeg", "images_animadas/navidad.png", "images_animadas/naranja.png", "images_animadas/niña.png", "images_animadas/naipe.png"],
+      audios: ["Papa.mp3", "Pila.mp3", "Pomo.mp3"],
+    },
     O: {
       palabras: ["Oso", "Ojos", "Oreja", "Olas", "Olla", "Ocho", "Oveja", "Ovni"],
       imagenes: ["images_animadas/oso.png", "images_animadas/ojos.png", "images_animadas/oreja.png", "images_animadas/olas.png", "images_animadas/olla.png", "images_animadas/ocho.png", "images_animadas/oveja.png", "images_animadas/ovni.png"],
@@ -86,7 +91,7 @@ const palabrasPorConsonante = {
     },
     R: {
       palabras: ["Ratón", "Reloj", "Robot", "Radio", "Rayo","Rana", "Reina"],
-      imagenes: ["images_animadas/raton.png", "images_animadas/reloj.png", "images_animadas/radio.png", "images_animadas/rayo.png", "images_animadas/rana.png", "images_animadas/reina.png"],
+      imagenes: ["images_animadas/raton.png", "images_animadas/reloj.png", "images_animadas/robot.png", "images_animadas/radio.png", "images_animadas/rayo.png", "images_animadas/rana.png", "images_animadas/reina.png"],
       audios: ["Papa.mp3", "Pila.mp3", "Pomo.mp3"],
     },
     S: {
