@@ -116,12 +116,12 @@ const palabrasPorConsonante = {
     },
     W: {
       palabras: ["Waffle", "Web", "Wifi", "Whisky", "Waterpolo", "Walkman"],
-      imagenes: ["images_animadas/papa.jpg", "images_animadas/pila.jpg", "images_animadas/pomo.jpg", "images_animadas/puma.jpg", "images_animadas/pito.jpg", "images_animadas/pipa.jpg"],
+      imagenes: ["images_animadas/wafle.png", "images_animadas/web.png", "images_animadas/wifi.png", "images_animadas/whisky.png", "images_animadas/waterpolo.png", "images_animadas/Walkman.png"],
       audios: ["Papa.mp3", "Pila.mp3", "Pomo.mp3"],
     },
     X: {
       palabras: ["Xilófono", "Xilófago", "Xenón", "Xiomara", "Xilócopo", "Xerófilo"],
-      imagenes: ["images_animadas/papa.jpg", "images_animadas/pila.jpg", "images_animadas/pomo.jpg", "images_animadas/puma.jpg", "images_animadas/pito.jpg", "images_animadas/pipa.jpg"],
+      imagenes: ["images_animadas/xilofono.png", "images_animadas/xilofago.png", "images_animadas/xenon.png", "images_animadas/xiomara.png", "images_animadas/xilocopo.png", "images_animadas/xerofilo.png"],
       audios: ["Papa.mp3", "Pila.mp3", "Pomo.mp3"],
     },
     Y: {
