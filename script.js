@@ -126,12 +126,12 @@ const palabrasPorConsonante = {
     },
     Y: {
       palabras: ["Yate", "Yeso", "Yegua", "Yema", "Yogurt", "Yunque"],
-      imagenes: ["images_animadas/papa.jpg", "images_animadas/pila.jpg", "images_animadas/pomo.jpg", "images_animadas/puma.jpg", "images_animadas/pito.jpg", "images_animadas/pipa.jpg"],
+      imagenes: ["images_animadas/yate.png", "images_animadas/yeso.png", "images_animadas/yegua.png", "images_animadas/yema.png", "images_animadas/yogurt.png", "images_animadas/yunque.png"],
       audios: ["Papa.mp3", "Pila.mp3", "Pomo.mp3"],
     },
     Z: {
-      palabras: ["Zorro", "Zombi", "Zorrillo", "Zoológico", "Zanahoria", "Zapato"],
-      imagenes: ["images_animadas/papa.jpg", "images_animadas/pila.jpg", "images_animadas/pomo.jpg", "images_animadas/puma.jpg", "images_animadas/pito.jpg", "images_animadas/pipa.jpg"],
+      palabras: ["Zorro", "Zombi", "Zorrillo", "Zoológico", "Zanahoria", "Zapatos"],
+      imagenes: ["images_animadas/zorro.png", "images_animadas/zombies.png", "images_animadas/zorrillo.png", "images_animadas/zoologico.jpeg", "images_animadas/zanahoria.png", "images_animadas/zapatos.png"],
       audios: ["Papa.mp3", "Pila.mp3", "Pomo.mp3"],
     },
    

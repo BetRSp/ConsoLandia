@@ -173,7 +173,7 @@ body {
     text-align: center;
     padding: 2px 0;
     box-shadow: 0 -9px 8px rgba(0, 0, 0, 0.2);
-    text-shadow: 1px 2px 0px #000000, 5px 4px 0px rgba(0,0,0,0.15);
+    text-shadow: 1px -2px 0px #000000, 5px 1px 0px rgba(0,0,0,0.15);
     font-family: Lucida Console;
     letter-spacing: 2px;
     word-spacing: 0px;
@@ -193,6 +193,8 @@ img {
     max-width: 200px;
     margin: 10px auto;
     display: block;
+    filter: drop-shadow(1px 1px 20px orange);
+    border-radius: 10px;
   }
   
   .juego {
