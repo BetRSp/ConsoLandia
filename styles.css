@@ -99,6 +99,8 @@ body {
     font-size: 33px;
     font-family: monospace;
     padding: 3px;
+    color: black;
+    font-weight: bold;
   }
   #label{
     font-size: 1.0em; /* Ajusta el tamaño de la fuente */
@@ -121,10 +123,14 @@ body {
   .resultado p {
     font-size: 1.5rem;
     margin-bottom: 10px;
+    color: black;
+    font-weight: bold;
   }
   .practica p {
     font-size: 1.5rem;
     margin-bottom: 2px;
+    color: black;
+    font-weight: bold;
 }
   textarea {
     width: 281px;
@@ -142,11 +148,12 @@ body {
   }
   
   #puntuacion {
-    font-size: 24px; /* Tamaño del texto */
-    font-weight: bold; /* Negrita */
-    color: #ff0000; /* Cambia el color (rojo en este caso) */
-    text-align: center; /* Centra el texto */
-    margin-top: 20px; /* Espacio superior */
+    font-size: 24px; 
+    font-weight: bold;
+    color: black; 
+    text-align: center;
+    margin-top: 20px; 
+    
   }
   
   button {
@@ -203,6 +210,8 @@ img {
   .juego p {
     font-size: 1.5rem;
     margin-bottom: -12px;
+    color: black;
+    font-weight: bold;
   }
   #letras-contenedor {
     display: flex;
