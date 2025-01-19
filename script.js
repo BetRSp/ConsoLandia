@@ -6,17 +6,17 @@ const palabrasPorConsonante = {
     }, 
     B: {
       palabras: ["Banana", "Barco", "Bola", "Bote", "Burro", "Ballena"],
-      imagenes: ["images_animadas/banana.jpg", "images_animadas/barco.jpg", "images_animadas/bola.jpg", "images_animadas/bote.jpg", "images_animadas/burro.jpg", "images_animadas/ballena.jpg"],
+      imagenes: ["images_animadas/banana.png", "images_animadas/barco.png", "images_animadas/bola.png", "images_animadas/bote.png", "images_animadas/burro.png", "images_animadas/ballena.png"],
       audios: ["banana.mp3", "barco.mp3", "bola.mp3"],
     },
     C: {
       palabras: ["Casa", "Coche", "Cielo", "Camisa", "Cerdo", "Caracol"],
-      imagenes: ["images_animadas/casa.jpg", "images_animadas/coche.jpg", "images_animadas/cielo.jpg", "images_animadas/camisa.jpg", "images_animadas/cerdo.jpg", "images_animadas/caracol.jpg"],
+      imagenes: ["images_animadas/casa.png", "images_animadas/coche.png", "images_animadas/cielo.jpg", "images_animadas/camisa.png", "images_animadas/cerdo.png", "images_animadas/caracol.png"],
       audios: ["casa.mp3", "coche.mp3", "cielo.mp3"],
     },
     D: {
       palabras: ["Dado", "Delfín", "Día", "Dedo", "Diente", "Diamante"],
-      imagenes: ["images_animadas/dado.jpg", "images_animadas/delfin.jpg", "images_animadas/dia.jpg", "images_animadas/dedo.jpg", "images_animadas/diente.jpg","images_animadas/diamantes.jpg"],
+      imagenes: ["images_animadas/dado.png", "images_animadas/delfin.png", "images_animadas/dia.jpg", "images_animadas/dedo.png", "images_animadas/diente.png","images_animadas/diamantes.png"],
       audios: ["dado.mp3", "delfin.mp3", "dia.mp3"],
     },
     E: {
@@ -56,12 +56,12 @@ const palabrasPorConsonante = {
     },
     L: {
       palabras: ["Loma", "Lima", "Lola", "Lupa", "Lobo", "limón"],
-      imagenes: ["images_animadas/loma.jpg.png", "images_animadas/lima.jpg", "images_animadas/lola.jpg", "images_animadas/lupa.jpg", "images_animadas/lobo.jpg", "images_animadas/limon.jpg"],
+      imagenes: ["images_animadas/loma.png", "images_animadas/lima.png", "images_animadas/lola.png", "images_animadas/lupa.png", "images_animadas/lobo.png", "images_animadas/limon.png"],
       audios: ["dado.mp3", "delfin.mp3", "dia.mp3"],
     },
     M: {
       palabras: ["Mamá", "Mimo", "Mima", "Momia","Misa","Masa", "Matias"],
-      imagenes: ["images_animadas/mama.jpg", "images_animadas/mimo.jpg.jpeg", "images_animadas/mima.jpg","images_animadas/momia.jpg", "images_animadas/misa.jpg", "images_animadas/masa.jpg","images_animadas/matias.jpg.png"],
+      imagenes: ["images_animadas/mama.png", "images_animadas/mimo.png", "images_animadas/mima.png","images_animadas/momia.png", "images_animadas/misa.png", "images_animadas/masa.png","images_animadas/matias.jpg.png"],
       audios: ["dado.mp3", "delfin.mp3", "dia.mp3"],
     },
     N: {
@@ -81,7 +81,7 @@ const palabrasPorConsonante = {
     },
     P: {
       palabras: ["Papá", "pila", "Pomo", "Puma", "Pito", "Pipa"],
-      imagenes: ["images_animadas/papa.jpg", "images_animadas/pila.jpg", "images_animadas/pomo.jpg", "images_animadas/puma.jpg", "images_animadas/pito.jpg", "images_animadas/pipa.jpg"],
+      imagenes: ["images_animadas/papa.png", "images_animadas/pila.png", "images_animadas/pomo.png", "images_animadas/puma.png", "images_animadas/pito.png", "images_animadas/pipa.png"],
       audios: ["Papa.mp3", "Pila.mp3", "Pomo.mp3"],
     },
     Q: {
@@ -96,7 +96,7 @@ const palabrasPorConsonante = {
     },
     S: {
       palabras: ["Sapo", "Sopa", "sol","suelo","Suma", "Samuel"],
-      imagenes: ["images_animadas/sapo.jpg", "images_animadas/sopa.jpg", "images_animadas/sol.jpg", "images_animadas/suelo.jpg", "images_animadas/suma.jpg ", "images_animadas/samuel.jpg.png"],
+      imagenes: ["images_animadas/sapo.png", "images_animadas/sopa.png", "images_animadas/sol.png", "images_animadas/suelo.png", "images_animadas/suma.png", "images_animadas/samuel.jpg.png"],
       audios: ["dado.mp3", "delfin.mp3", "dia.mp3"],
     },
     T: {
