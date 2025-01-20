@@ -150,7 +150,7 @@ document.getElementById("generar-palabra").addEventListener("click", () => {
   const consonante = document.getElementById("consonante").value;
 
   if (!palabrasPorConsonante[consonante]) {
-    alert("Por favor, selecciona una consonante válida.");
+    mostrarModal("Por favor, selecciona una consonante válida.", "⚠️");
     return;
   }
 
