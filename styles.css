@@ -20,7 +20,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden; /* Oculta desbordamientos inesperados */
+    overflow: hidden; 
 }
 
 .contenido-opaco {
@@ -29,9 +29,9 @@ body {
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
-    max-width: 600px; /* Limita el tamaño máximo */
-    max-height: 186vh; /* Limita la altura respecto al viewport */
-    overflow-y: auto; /* Habilita el scroll en caso necesario */
+    max-width: 600px; 
+    max-height: 80vh; 
+    overflow-y: auto; 
 }
   
   .selector,
@@ -81,9 +81,9 @@ body {
     max-width: 600px;
   }
   #consonante {
-    font-size: 1.0em; /* Aumenta el tamaño del texto */
-    padding: 3px; /* Aumenta el espacio interno */
-    width: auto; /* Ajusta el ancho automáticamente o cámbialo a un valor fijo */
+    font-size: 1.0em; 
+    padding: 3px; 
+    width: auto; 
     border-radius: 5px;
     overflow-y: auto; 
     height: auto;
@@ -103,21 +103,21 @@ body {
     font-weight: bold;
   }
   #label{
-    font-size: 1.0em; /* Ajusta el tamaño de la fuente */
-    font-weight: bold; /* Opcional: Negrita */
-    color: #333; /* Cambia el color si lo deseas */
+    font-size: 1.0em; 
+    font-weight: bold;
+    color: #333; 
   }
   .resultado h2 {
-    font-size: 3rem; /* Tamaño de la fuente */
-    color: #333; /* Color del texto */
-    text-align: center; /* Centrar el texto */
-    margin: 10px 0; /* Espaciado superior e inferior */
+    font-size: 3rem; 
+    color: #333; 
+    text-align: center; 
+    margin: 10px 0; 
     font-family: monospace;
   }
   #imagen-palabra {
-    max-width: 100%; /* La imagen no será más ancha que el contenedor */
-    max-height: 128px; /* Define un tamaño máximo razonable */
-    object-fit: contain; /* Mantiene las proporciones de la imagen */
+    max-width: 100%; 
+    max-height: 10vh; 
+    object-fit: contain; 
 }
   
   .resultado p {
@@ -133,18 +133,39 @@ body {
     font-weight: bold;
 }
   textarea {
-    width: 281px;
-    height: 53px;
+    width: 100%;
+    height: auto;
     font-size: 3.2em;
     text-align: center;
 
   }
+  @media (max-width: 480px) {
+    .contenido-opaco {
+        width: 90%; 
+    }
+    textarea {
+        font-size: 2em; 
+    }
+    header h1 {
+        font-size: 24px; 
+    }
+}
+
+@media (min-width: 1024px) {
+    .contenido-opaco {
+        width: 50%; 
+    }
+    header h1 {
+        font-size: 48px; 
+    }
+}
+
   
   #area-escritura::placeholder {
-    font-size: 28px; /* Tamaño del texto */
-    color: #888; /* Color del texto */
-    text-align: center; /* Centrar horizontalmente el texto del placeholder */
-    line-height: 53px; /* Igual al valor de la altura */
+    font-size: 28px; 
+    color: #888; 
+    text-align: center; 
+    line-height: 53px; 
   }
   
   #puntuacion {
@@ -197,7 +218,8 @@ body {
   }
   
 img {
-    max-width: 200px;
+    max-width: 100%;
+    height: auto;
     margin: 10px auto;
     display: block;
     filter: drop-shadow(1px 1px 20px orange);
@@ -220,6 +242,7 @@ img {
     margin: 20px 0;
     font-size: 24px;
     font-family: monospace;
+    flex-wrap: wrap;
   }
   
   #letras-contenedor span {
@@ -241,7 +264,7 @@ img {
   }
   /* Estilo del fondo del modal */
 .modal {
-  display: none; /* Oculto por defecto */
+  display: none; 
   position: fixed;
   z-index: 1000;
   left: 0;
@@ -249,11 +272,13 @@ img {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4); /* Fondo semi-transparente */
+  background-color: rgba(0, 0, 0, 0.4); 
 }
 
 /* Contenedor del contenido del modal */
 .modal-contenido {
+  width: 90%; 
+  max-width: 400px;
   background-color: white;
   margin: 15% auto;
   padding: 20px;
