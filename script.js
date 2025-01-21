@@ -30,24 +30,24 @@ const palabrasPorConsonante = {
       audios: ["images_animadas/foca.mp3", "images_animadas/faro.mp3", "images_animadas/flor.mp3","images_animadas/fuego.mp3", "images_animadas/falda.mp3", "images_animadas/foco.mp3", "images_animadas/fogata.mp3"],
     },
     G: {
-      palabras: ["Gato", "Gorrila", "Galleta", "Guante", "Guitarra", "Gorro", "Grillo"],
+      palabras: ["Gato", "Gorila", "Galleta", "Guante", "Guitarra", "Gorro", "Grillo"],
       imagenes: ["images_animadas/gato.png", "images_animadas/gorrila.png", "images_animadas/galleta.png", "images_animadas/guante.png", "images_animadas/guitarra.png", "images_animadas/gorro.png", "images_animadas/grillo.png"],
-      audios: ["banan", "barco.mp3", "bola.mp3"],
+      audios: ["images_animadas/gato.mp3", "images_animadas/gorila.mp3", "images_animadas/galleta.mp3", "images_animadas/guante.mp3", "images_animadas/guitarra.mp3", "images_animadas/gorro.mp3", "images_animadas/grillo.mp3"],
     },
     H: {
       palabras: ["Hielo", "Hueco", "Hormiga", "Hongo", "Hada", "Helado", "Hacha"],
       imagenes: ["images_animadas/hielo.png", "images_animadas/hueco.png", "images_animadas/hormiga.png", "images_animadas/hongo.png", "images_animadas/hada.png", "images_animadas/helado.png", "images_animadas/hacha.png"],
-      audios: ["banana.mp3", "barco.mp3", "bola.mp3"],
+      audios: ["images_animadas/hielo.mp3", "images_animadas/hueco.mp3", "images_animadas/hormiga.mp3", "images_animadas/hongo.mp3", "images_animadas/hada.mp3", "images_animadas/helado.mp3", "images_animadas/hacha.mp3"],
     },
     I: {
       palabras: ["Indio", "Iglesia", "Iman", "Isla", "Iguana", "Invierno", "Iglú"],
       imagenes: ["images_animadas/indio.png", "images_animadas/iglesia.png", "images_animadas/iman.png", "images_animadas/isla.png", "images_animadas/iguana.png", "images_animadas/invierno.jpeg", "images_animadas/iglu.png"],
-      audios: ["banana.mp3", "barco.mp3", "bola.mp3"],
+      audios: ["images_animadas/indio.mp3", "images_animadas/iglesia.mp3", "images_animadas/iman.mp3", "images_animadas/isla.mp3", "images_animadas/iguana.mp3", "images_animadas/invierno.mp3", "images_animadas/iglu.mp3"],
     },
     J: {
       palabras: ["Jardin", "Japón", "Juguetes", "Jirafa", "Joya", "Jugo", "Jabalí", "Juan Luis"],
       imagenes: ["images_animadas/jardin.png", "images_animadas/japon.png", "images_animadas/juguetes.png", "images_animadas/jirafa.png", "images_animadas/joya.png", "images_animadas/jugo.png", "images_animadas/jabali.png", "images_animadas/juancho.png"],
-      audios: ["banana.mp3", "barco.mp3", "bola.mp3"],
+      audios: ["images_animadas/jardin.mp3", "images_animadas/japon.mp3", "images_animadas/juguetes.mp3", "images_animadas/jirafa.mp3", "images_animadas/joya.mp3", "images_animadas/juego.mp3", "images_animadas/jabali.mp3", "images_animadas/juancho.mp3"],
     },
     K: {
       palabras: ["Karate", "Kilo", "Koala", "Kiosco", "KaraoKe", "Kwi", "Kétchup"],
@@ -97,7 +97,7 @@ const palabrasPorConsonante = {
     S: {
       palabras: ["Sapo", "Sopa", "sol","suelo","Suma", "Samuel"],
       imagenes: ["images_animadas/sapo.png", "images_animadas/sopa.png", "images_animadas/sol.png", "images_animadas/suelo.png", "images_animadas/suma.png", "images_animadas/samuel.jpg.png"],
-      audios: ["dado.mp3", "delfin.mp3", "dia.mp3"],
+      audios: ["images_animadas/sapo.mp3", "images_animadas/sopa.mp3", "images_animadas/sol.mp3", "images_animadas/suelo.mp3", "images_animadas/suma.mp3", "images_animadas/samuel.mp3"],
     },
     T: {
       palabras: ["Tetero", "Tomate", "Tiburón", "Tortuga", "Tambor", "Tenedor"],
