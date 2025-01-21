@@ -45,8 +45,8 @@ const palabrasPorConsonante = {
       audios: ["banana.mp3", "barco.mp3", "bola.mp3"],
     },
     J: {
-      palabras: ["Jardin", "Japón", "Juguetes", "Jirafa", "Joya", "Jugo", "Jabalí"],
-      imagenes: ["images_animadas/jardin.png", "images_animadas/japon.png", "images_animadas/juguetes.png", "images_animadas/jirafa.png", "images_animadas/joya.png", "images_animadas/jugo.png", "images_animadas/jabali.png"],
+      palabras: ["Jardin", "Japón", "Juguetes", "Jirafa", "Joya", "Jugo", "Jabalí", "Juan Luis"],
+      imagenes: ["images_animadas/jardin.png", "images_animadas/japon.png", "images_animadas/juguetes.png", "images_animadas/jirafa.png", "images_animadas/joya.png", "images_animadas/jugo.png", "images_animadas/jabali.png", "images_animadas/juancho.png"],
       audios: ["banana.mp3", "barco.mp3", "bola.mp3"],
     },
     K: {
