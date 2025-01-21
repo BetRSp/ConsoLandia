@@ -2,37 +2,37 @@ const palabrasPorConsonante = {
      A: {
     palabras: ["Antonella", "Avión", "Abeja", "Araña", "Anillo", "Arcoíris", "Arbol", "Auto"],
     imagenes: ["images_animadas/Anto.png", "images_animadas/avion.png", "images_animadas/abeja.png", "images_animadas/araña.png", "images_animadas/anillo.png", "images_animadas/arcoiris.png","images_animadas/arbol.png", "images_animadas/auto.png"],
-    audios: ["banana.mp3", "barco.mp3", "bola.mp3"],
+    audios: ["images_animadas/antonella.mp3", "images_animadas/avion.mp3", "images_animadas/abeja.mp3", "images_animadas/araña.mp3", "images_animadas/anillo.mp3","images_animadas/arcoiris.mp3", "images_animadas/arbol.mp3","images_animadas/auto.mp3"],
     }, 
     B: {
       palabras: ["Banana", "Barco", "Bola", "Bote", "Burro", "Ballena"],
       imagenes: ["images_animadas/banana.png", "images_animadas/barco.png", "images_animadas/bola.png", "images_animadas/bote.png", "images_animadas/burro.png", "images_animadas/ballena.png"],
-      audios: ["banana.mp3", "barco.mp3", "bola.mp3"],
+      audios: ["images_animadas/banana.mp3", "images_animadas/barco.mp3", "images_animadas/bola.mp3", "images_animadas/bote.mp3", "images_animadas/burro.mp3", "images_animadas/ballena.mp3"],
     },
     C: {
       palabras: ["Casa", "Coche", "Cielo", "Camisa", "Cerdo", "Caracol"],
       imagenes: ["images_animadas/casa.png", "images_animadas/coche.png", "images_animadas/cielo.jpg", "images_animadas/camisa.png", "images_animadas/cerdo.png", "images_animadas/caracol.png"],
-      audios: ["casa.mp3", "coche.mp3", "cielo.mp3"],
+      audios: ["images_animadas/casa.mp3", "images_animadas/coche.mp3", "images_animadas/cielo.mp3", "images_animadas/camisa.mp3", "images_animadas/cerdo.mp3","images_animadas/caracol.mp3"],
     },
     D: {
       palabras: ["Dado", "Delfín", "Día", "Dedo", "Diente", "Diamante"],
       imagenes: ["images_animadas/dado.png", "images_animadas/delfin.png", "images_animadas/dia.jpg", "images_animadas/dedo.png", "images_animadas/diente.png","images_animadas/diamantes.png"],
-      audios: ["dado.mp3", "delfin.mp3", "dia.mp3"],
+      audios: ["images_animadas/dado.mp3", "images_animadas/delfin.mp3", "images_animadas/dia.mp3", "images_animadas/dedo.mp3", "images_animadas/diente.mp3", "images_animadas/diamante.mp3"],
     },
     E: {
       palabras: ["Elefante", "Enano", "Estrella", "Escalera", "Espejo", "Escoba", "Escudo"],
       imagenes: ["images_animadas/elefante.png", "images_animadas/enano.png", "images_animadas/estrella.png", "images_animadas/escalera.png", "images_animadas/espejo.png", "images_animadas/escoba.png", "images_animadas/escudo.png"],
-      audios: ["banana.mp3", "barco.mp3", "bola.mp3"],
+      audios: ["images_animadas/elefante.mp3", "images_animadas/enano.mp3", "images_animadas/estrella.mp3", "images_animadas/escalera.mp3", "images_animadas/espejo.mp3", "images_animadas/escoba.mp3", "images_animadas/escudo.mp3"],
     },
     F: {
       palabras: ["Foca", "Faro", "Flor", "Fuego", "Falda", "Foco", "Fogata"],
       imagenes: ["images_animadas/foca.png", "images_animadas/faro.png", "images_animadas/flor.png", "images_animadas/fuego.png", "images_animadas/falda.png", "images_animadas/foco.png", "images_animadas/fogata.png"],
-      audios: ["banana.mp3", "barco.mp3", "bola.mp3"],
+      audios: ["images_animadas/foca.mp3", "images_animadas/faro.mp3", "images_animadas/flor.mp3","images_animadas/fuego.mp3", "images_animadas/falda.mp3", "images_animadas/foco.mp3", "images_animadas/fogata.mp3"],
     },
     G: {
       palabras: ["Gato", "Gorrila", "Galleta", "Guante", "Guitarra", "Gorro", "Grillo"],
       imagenes: ["images_animadas/gato.png", "images_animadas/gorrila.png", "images_animadas/galleta.png", "images_animadas/guante.png", "images_animadas/guitarra.png", "images_animadas/gorro.png", "images_animadas/grillo.png"],
-      audios: ["banana.mp3", "barco.mp3", "bola.mp3"],
+      audios: ["banan", "barco.mp3", "bola.mp3"],
     },
     H: {
       palabras: ["Hielo", "Hueco", "Hormiga", "Hongo", "Hada", "Helado", "Hacha"],
