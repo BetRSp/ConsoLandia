@@ -77,22 +77,22 @@ const palabrasPorConsonante = {
     O: {
       palabras: ["Oso", "Ojos", "Oreja", "Olas", "Olla", "Ocho", "Oveja", "Ovni"],
       imagenes: ["images_animadas/oso.png", "images_animadas/ojos.png", "images_animadas/oreja.png", "images_animadas/olas.png", "images_animadas/olla.png", "images_animadas/ocho.png", "images_animadas/oveja.png", "images_animadas/ovni.png"],
-      audios: ["Papa.mp3", "Pila.mp3", "Pomo.mp3"],
+      audios: ["images_animadas/oso.mp3", "images_animadas/ojos.mp3", "images_animadas/oreja.mp3", "images_animadas/olas.mp3", "images_animadas/olla.mp3", "images_animadas/ocho.mp3", "images_animadas/oveja.mp3", "images_animadas/ovni.mp3"],
     },
     P: {
       palabras: ["Papá", "pila", "Pomo", "Puma", "Pito", "Pipa"],
       imagenes: ["images_animadas/papa.png", "images_animadas/pila.png", "images_animadas/pomo.png", "images_animadas/puma.png", "images_animadas/pito.png", "images_animadas/pipa.png"],
-      audios: ["Papa.mp3", "Pila.mp3", "Pomo.mp3"],
+      audios: ["images_animadas/papa.mp3", "images_animadas/pila.mp3", "images_animadas/pomo.mp3", "images_animadas/puma.mp3", "images_animadas/pito.mp3", "images_animadas/pipa.mp3"],
     },
     Q: {
       palabras: ["Queso", "Química", "Querubín", "Quince", "Quemar", "Quebrar"],
       imagenes: ["images_animadas/queso.png", "images_animadas/quimica.png", "images_animadas/querubin.png", "images_animadas/quince.png", "images_animadas/quemar.png", "images_animadas/quebrar.png"],
-      audios: ["Papa.mp3", "Pila.mp3", "Pomo.mp3"],
+      audios: ["images_animadas/queso.mp3", "images_animadas/quimica.mp3", "images_animadas/querubin.mp3", "images_animadas/quince.mp3", "images_animadas/quemar.mp3", "images_animadas/quebrar.mp3"],
     },
     R: {
       palabras: ["Ratón", "Reloj", "Robot", "Radio", "Rayo","Rana", "Reina"],
       imagenes: ["images_animadas/raton.png", "images_animadas/reloj.png", "images_animadas/robot.png", "images_animadas/radio.png", "images_animadas/rayo.png", "images_animadas/rana.png", "images_animadas/reina.png"],
-      audios: ["Papa.mp3", "Pila.mp3", "Pomo.mp3"],
+      audios: ["images_animadas/raton.mp3", "images_animadas/reloj.mp3", "images_animadas/robot.mp3", "images_animadas/radio.mp3", "images_animadas/rayo.mp3", "images_animadas/rana.mp3", "images_animadas/reina.mp3"],
     },
     S: {
       palabras: ["Sapo", "Sopa", "sol","suelo","Suma", "Samuel"],
@@ -102,37 +102,37 @@ const palabrasPorConsonante = {
     T: {
       palabras: ["Tetero", "Tomate", "Tiburón", "Tortuga", "Tambor", "Tenedor"],
       imagenes: ["images_animadas/tetero.png", "images_animadas/tomate.png", "images_animadas/tiburon.png", "images_animadas/tortuga.png", "images_animadas/tambor.png", "images_animadas/tenedor.png"],
-      audios: ["Papa.mp3", "Pila.mp3", "Pomo.mp3"],
+      audios: ["images_animadas/tetero.mp3", "images_animadas/tomate.mp3", "images_animadas/tiburon.mp3", "images_animadas/tortuga.mp3", "images_animadas/tambor.mp3", "images_animadas/tenedor.mp3"],
     },
     u: {
       palabras: ["Uva", "Uñas", "Uno", "Unicornio", "Universo", "Uniforme", "Urraca"],
       imagenes: ["images_animadas/uva.png", "images_animadas/uñas.png", "images_animadas/uno.png", "images_animadas/unicornio.png", "images_animadas/universo.jpeg", "images_animadas/uniforme.png", "images_animadas/urraca.png"],
-      audios: ["Papa.mp3", "Pila.mp3", "Pomo.mp3"],
+      audios: ["images_animadas/uva.mp3", "images_animadas/uñas.mp3", "images_animadas/uno.mp3", "images_animadas/unicornio.mp3", "images_animadas/universo.mp3", "images_animadas/uniforme.mp3","images_animadas/urraca.mp3"],
     },
     V: {
       palabras: ["Volcán", "Voleibol", "Vampiro", "Violín", "Vikingo", "Veinte", "Verano"],
       imagenes: ["images_animadas/volcan.png", "images_animadas/voleibol.png", "images_animadas/vampiro.png", "images_animadas/violin.png", "images_animadas/vikingo.png", "images_animadas/veinte.png", "images_animadas/verano.jpg"],
-      audios: ["Papa.mp3", "Pila.mp3", "Pomo.mp3"],
+      audios: ["images_animadas/tetero.mp3", "images_animadas/tomate.mp3", "images_animadas/tiburon.mp3", "images_animadas/tortuga.mp3", "images_animadas/tambor.mp3", "images_animadas/tenedor.mp3"],
     },
     W: {
       palabras: ["Waffle", "Web", "Wifi", "Whisky", "Waterpolo", "Walkman"],
       imagenes: ["images_animadas/wafle.png", "images_animadas/web.png", "images_animadas/wifi.png", "images_animadas/whisky.png", "images_animadas/waterpolo.png", "images_animadas/Walkman.png"],
-      audios: ["Papa.mp3", "Pila.mp3", "Pomo.mp3"],
+      audios: ["images_animadas/tetero.mp3", "images_animadas/tomate.mp3", "images_animadas/tiburon.mp3", "images_animadas/tortuga.mp3", "images_animadas/tambor.mp3", "images_animadas/tenedor.mp3"],
     },
     X: {
       palabras: ["Xilófono", "Xilófago", "Xenón", "Xiomara", "Xilócopo", "Xerófilo"],
       imagenes: ["images_animadas/xilofono.png", "images_animadas/xilofago.png", "images_animadas/xenon.png", "images_animadas/xiomara.png", "images_animadas/xilocopo.png", "images_animadas/xerofilo.png"],
-      audios: ["Papa.mp3", "Pila.mp3", "Pomo.mp3"],
+      audios: ["images_animadas/tetero.mp3", "images_animadas/tomate.mp3", "images_animadas/tiburon.mp3", "images_animadas/tortuga.mp3", "images_animadas/tambor.mp3", "images_animadas/tenedor.mp3"],
     },
     Y: {
       palabras: ["Yate", "Yeso", "Yegua", "Yema", "Yogurt", "Yunque"],
       imagenes: ["images_animadas/yate.png", "images_animadas/yeso.png", "images_animadas/yegua.png", "images_animadas/yema.png", "images_animadas/yogurt.png", "images_animadas/yunque.png"],
-      audios: ["Papa.mp3", "Pila.mp3", "Pomo.mp3"],
+      audios: ["images_animadas/tetero.mp3", "images_animadas/tomate.mp3", "images_animadas/tiburon.mp3", "images_animadas/tortuga.mp3", "images_animadas/tambor.mp3", "images_animadas/tenedor.mp3"],
     },
     Z: {
       palabras: ["Zorro", "Zombi", "Zorrillo", "Zoológico", "Zanahoria", "Zapatos"],
       imagenes: ["images_animadas/zorro.png", "images_animadas/zombies.png", "images_animadas/zorrillo.png", "images_animadas/zoologico.jpeg", "images_animadas/zanahoria.png", "images_animadas/zapatos.png"],
-      audios: ["Papa.mp3", "Pila.mp3", "Pomo.mp3"],
+      audios: ["images_animadas/tetero.mp3", "images_animadas/tomate.mp3", "images_animadas/tiburon.mp3", "images_animadas/tortuga.mp3", "images_animadas/tambor.mp3", "images_animadas/tenedor.mp3"],
     },
    
   };
