@@ -52,17 +52,17 @@ const palabrasPorConsonante = {
     K: {
       palabras: ["Karate", "Kilo", "Koala", "Kiosco", "KaraoKe", "Kwi", "Kétchup"],
       imagenes: ["images_animadas/karate.png", "images_animadas/kilo.png", "images_animadas/koala.png", "images_animadas/kiosco.png", "images_animadas/karaoke.jpeg", "images_animadas/kwi.png", "images_animadas/ketchup.png"],
-      audios: ["banana.mp3", "barco.mp3", "bola.mp3"],
+      audios: ["images_animadas/karate.mp3", "images_animadas/kilo.mp3", "images_animadas/koala.mp3", "images_animadas/kiosco.mp3", "images_animadas/karaoke.mp3", "images_animadas/kwi.mp3", "images_animadas/ketchup.mp3"],
     },
     L: {
       palabras: ["Loma", "Lima", "Lola", "Lupa", "Lobo", "limón"],
       imagenes: ["images_animadas/loma.png", "images_animadas/lima.png", "images_animadas/lola.png", "images_animadas/lupa.png", "images_animadas/lobo.png", "images_animadas/limon.png"],
-      audios: ["dado.mp3", "delfin.mp3", "dia.mp3"],
+      audios: ["images_animadas/loma.mp3", "images_animadas/lima.mp3", "images_animadas/lola.mp3", "images_animadas/lupa.mp3", "images_animadas/lobo.mp3", "images_animadas/limon.mp3"],
     },
     M: {
       palabras: ["Mamá", "Mimo", "Mima", "Momia","Misa","Masa", "Matias"],
       imagenes: ["images_animadas/mama.png", "images_animadas/mimo.png", "images_animadas/mima.png","images_animadas/momia.png", "images_animadas/misa.png", "images_animadas/masa.png","images_animadas/matias.jpg.png"],
-      audios: ["dado.mp3", "delfin.mp3", "dia.mp3"],
+      audios: ["images_animadas/mama.mp3", "images_animadas/mimo.mp3", "images_animadas/mima.mp3", "images_animadas/momia.mp3", "images_animadas/misa.mp3", "images_animadas/masa.mp3", "images_animadas/matias.mp3"],
     },
     N: {
       palabras: ["Nido", "Nariz", "Noche", "Navidad", "Naranja","Niña", "Naipe"],
