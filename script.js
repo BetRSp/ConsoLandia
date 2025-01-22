@@ -112,27 +112,27 @@ const palabrasPorConsonante = {
     V: {
       palabras: ["Volcán", "Voleibol", "Vampiro", "Violín", "Vikingo", "Veinte", "Verano"],
       imagenes: ["images_animadas/volcan.png", "images_animadas/voleibol.png", "images_animadas/vampiro.png", "images_animadas/violin.png", "images_animadas/vikingo.png", "images_animadas/veinte.png", "images_animadas/verano.jpg"],
-      audios: ["images_animadas/tetero.mp3", "images_animadas/tomate.mp3", "images_animadas/tiburon.mp3", "images_animadas/tortuga.mp3", "images_animadas/tambor.mp3", "images_animadas/tenedor.mp3"],
+      audios: ["images_animadas/volcan.mp3", "images_animadas/voleibol.mp3", "images_animadas/vampiro.mp3", "images_animadas/violin.mp3", "images_animadas/vikingo.mp3", "images_animadas/veinte.mp3", "images_animadas/verano.mp3"],
     },
     W: {
       palabras: ["Waffle", "Web", "Wifi", "Whisky", "Waterpolo", "Walkman"],
       imagenes: ["images_animadas/wafle.png", "images_animadas/web.png", "images_animadas/wifi.png", "images_animadas/whisky.png", "images_animadas/waterpolo.png", "images_animadas/Walkman.png"],
-      audios: ["images_animadas/tetero.mp3", "images_animadas/tomate.mp3", "images_animadas/tiburon.mp3", "images_animadas/tortuga.mp3", "images_animadas/tambor.mp3", "images_animadas/tenedor.mp3"],
+      audios: ["images_animadas/waffle.mp3", "images_animadas/web.mp3", "images_animadas/wifi.mp3", "images_animadas/whisky.mp3", "images_animadas/waterpolo.mp3", "images_animadas/walkman.mp3"],
     },
     X: {
       palabras: ["Xilófono", "Xilófago", "Xenón", "Xiomara", "Xilócopo", "Xerófilo"],
       imagenes: ["images_animadas/xilofono.png", "images_animadas/xilofago.png", "images_animadas/xenon.png", "images_animadas/xiomara.png", "images_animadas/xilocopo.png", "images_animadas/xerofilo.png"],
-      audios: ["images_animadas/tetero.mp3", "images_animadas/tomate.mp3", "images_animadas/tiburon.mp3", "images_animadas/tortuga.mp3", "images_animadas/tambor.mp3", "images_animadas/tenedor.mp3"],
+      audios: ["images_animadas/xilofono.mp3", "images_animadas/xilofago.mp3", "images_animadas/xenon.mp3", "images_animadas/xiomara.mp3", "images_animadas/xilocopo.mp3", "images_animadas/xerofilo.mp3"],
     },
     Y: {
       palabras: ["Yate", "Yeso", "Yegua", "Yema", "Yogurt", "Yunque"],
       imagenes: ["images_animadas/yate.png", "images_animadas/yeso.png", "images_animadas/yegua.png", "images_animadas/yema.png", "images_animadas/yogurt.png", "images_animadas/yunque.png"],
-      audios: ["images_animadas/tetero.mp3", "images_animadas/tomate.mp3", "images_animadas/tiburon.mp3", "images_animadas/tortuga.mp3", "images_animadas/tambor.mp3", "images_animadas/tenedor.mp3"],
+      audios: ["images_animadas/yate.mp3", "images_animadas/yeso.mp3", "images_animadas/yegua.mp3", "images_animadas/yema.mp3", "images_animadas/yogurt.mp3", "images_animadas/yunque.mp3"],
     },
     Z: {
       palabras: ["Zorro", "Zombi", "Zorrillo", "Zoológico", "Zanahoria", "Zapatos"],
       imagenes: ["images_animadas/zorro.png", "images_animadas/zombies.png", "images_animadas/zorrillo.png", "images_animadas/zoologico.jpeg", "images_animadas/zanahoria.png", "images_animadas/zapatos.png"],
-      audios: ["images_animadas/tetero.mp3", "images_animadas/tomate.mp3", "images_animadas/tiburon.mp3", "images_animadas/tortuga.mp3", "images_animadas/tambor.mp3", "images_animadas/tenedor.mp3"],
+      audios: ["images_animadas/zorro.mp3", "images_animadas/zombie.mp3", "images_animadas/zorrillo.mp3", "images_animadas/zoologico.mp3", "images_animadas/zanahoria.mp3", "images_animadas/zapatos.mp3"],
     },
    
   };
