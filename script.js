@@ -47,7 +47,7 @@ const palabrasPorConsonante = {
     J: {
       palabras: ["Jardin", "Japón", "Juguetes", "Jirafa", "Joya", "Jugo", "Jabalí", "Juan Luis"],
       imagenes: ["images_animadas/jardin.png", "images_animadas/japon.png", "images_animadas/juguetes.png", "images_animadas/jirafa.png", "images_animadas/joya.png", "images_animadas/jugo.png", "images_animadas/jabali.png", "images_animadas/juancho.png"],
-      audios: ["images_animadas/jardin.mp3", "images_animadas/japon.mp3", "images_animadas/juguetes.mp3", "images_animadas/jirafa.mp3", "images_animadas/joya.mp3", "images_animadas/juego.mp3", "images_animadas/jabali.mp3", "images_animadas/juancho.mp3"],
+      audios: ["images_animadas/jardin.mp3", "images_animadas/japon.mp3", "images_animadas/juguetes.mp3", "images_animadas/jirafa.mp3", "images_animadas/joya.mp3", "images_animadas/jugo.mp3", "images_animadas/jabali.mp3", "images_animadas/juancho.mp3"],
     },
     K: {
       palabras: ["Karate", "Kilo", "Koala", "Kiosco", "KaraoKe", "Kwi", "Kétchup"],
