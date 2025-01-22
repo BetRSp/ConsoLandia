@@ -67,12 +67,12 @@ const palabrasPorConsonante = {
     N: {
       palabras: ["Nido", "Nariz", "Noche", "Navidad", "Naranja","Niña", "Naipe"],
       imagenes: ["images_animadas/nido.png", "images_animadas/nariz.png", "images_animadas/noche.jpeg", "images_animadas/navidad.png", "images_animadas/naranja.png", "images_animadas/niña.png", "images_animadas/naipe.png"],
-      audios: ["Papa.mp3", "Pila.mp3", "Pomo.mp3"],
+      audios: ["images_animadas/nido.mp3", "images_animadas/nariz.mp3", "images_animadas/noche.mp3", "images_animadas/navidad.mp3", "images_animadas/naranja.mp3", "images_animadas/niña.mp3", "images_animadas/naipe.mp3"],
     },
     Ñ: {
       palabras: ["Ñandú", "Ñoquis", "Ñoño", "Ñapa", "Ñame","Ñu", "Ñeque"],
       imagenes: ["images_animadas/ñandu.png", "images_animadas/ñoquis.png", "images_animadas/ñoño.png", "images_animadas/ñapa.png", "images_animadas/ñame.png", "images_animadas/ñu.png", "images_animadas/ñeque.png"],
-      audios: ["Papa.mp3", "Pila.mp3", "Pomo.mp3"],
+      audios: ["images_animadas/ñandu.mp3", "images_animadas/ñoquis.mp3", "images_animadas/ñoño.mp3", "images_animadas/ñapa.mp3", "images_animadas/ñame.mp3", "images_animadas/ñu.mp3", "images_animadas/ñeque.mp3"],
     },
     O: {
       palabras: ["Oso", "Ojos", "Oreja", "Olas", "Olla", "Ocho", "Oveja", "Ovni"],
