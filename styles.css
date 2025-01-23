@@ -329,8 +329,19 @@ font-size: 30px;
   width: 100vw; /* Ocupa todo el ancho */
   height: 100vh; /* Ocupa todo el alto */
   object-fit: cover; /* Evita distorsión de la imagen */
- 
   margin: 0; /* Quita el margen */
   border-radius: 0; /* Asegura que no tenga bordes redondeados */
   filter: none; /* Quita sombras si aplican */
+}
+
+@media (max-width: 600px) {
+  #animacion-fuegos {
+    width: 100vw; /* 100% del ancho de la ventana */
+    height: 100vh; /* 100% del alto de la ventana */
+    position: fixed; /* Asegúrate de que esté fijo en la pantalla */
+    top: 0;
+    left: 0;
+    object-fit: cover; /* Asegura que la animación no se deforme */
+
+  }
 }
