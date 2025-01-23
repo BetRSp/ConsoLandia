@@ -196,10 +196,8 @@ footer {
   color: #4caf50;
   font-weight: bold;
   font-size: 1.7rem;
-  margin-top: 0px;
   background:  #b7e0f8;
   text-align: center;
-  padding: 2px 0;
   box-shadow: 0 -9px 8px rgba(0, 0, 0, 0.2);
   text-shadow: 1px -2px 0px #000000, 5px 1px 0px rgba(0,0,0,0.15);
   font-family: Lucida Console;
@@ -209,6 +207,10 @@ footer {
   font-style: normal;
   font-variant: small-caps;
   text-transform: capitalize;
+  width: 100%; /* Ocupa todo el ancho */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 @media (max-width: 768px) {
