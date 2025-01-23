@@ -342,6 +342,6 @@ font-size: 30px;
     top: 0;
     left: 0;
     object-fit: cover; /* Asegura que la animación no se deforme */
-
+    display: block;
   }
 }
