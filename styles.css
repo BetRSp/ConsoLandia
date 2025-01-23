@@ -329,5 +329,8 @@ font-size: 30px;
   width: 100vw; /* Ocupa todo el ancho */
   height: 100vh; /* Ocupa todo el alto */
   object-fit: cover; /* Evita distorsión de la imagen */
-  z-index: 1000; /* Asegura que esté sobre otros elementos */
+ 
+  margin: 0; /* Quita el margen */
+  border-radius: 0; /* Asegura que no tenga bordes redondeados */
+  filter: none; /* Quita sombras si aplican */
 }
