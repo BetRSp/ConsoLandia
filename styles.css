@@ -320,3 +320,14 @@ line-height: 1.5;
 .emoticono {
 font-size: 30px;
 }
+
+#animacion-fuegos {
+  display: none; /* Solo se muestra dinámicamente */
+  position: fixed; /* Para que esté fijo en la pantalla */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Ocupa todo el ancho */
+  height: 100vh; /* Ocupa todo el alto */
+  object-fit: cover; /* Evita distorsión de la imagen */
+  z-index: 1000; /* Asegura que esté sobre otros elementos */
+}

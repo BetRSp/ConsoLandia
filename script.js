@@ -240,26 +240,43 @@ document.getElementById("generar-palabra").addEventListener("click", () => {
       letraArrastrada = null; 
     }
   }
+
   // Función para mostrar el modal con mensaje personalizado
-function mostrarModal(mensaje, emoji = "") {
-  const modal = document.getElementById("modal-alerta");
-  const mensajeModal = document.getElementById("mensaje-modal");
-
-  mensajeModal.innerHTML = `<span class="emoticono">${emoji}</span> ${mensaje}`;
-  modal.style.display = "block";
-
-  // Cerrar modal al hacer clic en la 'X'
-  document.getElementById("cerrar-modal").onclick = () => {
-    modal.style.display = "none";
-  };
-
-  // Cerrar modal al hacer clic fuera del contenido
-  window.onclick = (event) => {
-    if (event.target === modal) {
-      modal.style.display = "none";
+  function mostrarModal(mensaje, emoji = "") {
+    const modal = document.getElementById("modal-alerta");
+    const mensajeModal = document.getElementById("mensaje-modal");
+    const animacionFuegos = document.getElementById("animacion-fuegos");
+    const audioCelebracion = document.getElementById("audio-celebracion");
+  
+    mensajeModal.innerHTML = `<span class="emoticono">${emoji}</span> ${mensaje}`;
+    modal.style.display = "block";
+  
+    // Mostrar animación y reproducir audio para mensajes de éxito
+    if (mensaje.includes("¡Correcto! ¡Bien hecho!")) {
+      animacionFuegos.style.display = "block";
+      audioCelebracion.play();
+    } else {
+      animacionFuegos.style.display = "none";
     }
-  };
-}
+  
+    // Cerrar modal al hacer clic en la 'X'
+    document.getElementById("cerrar-modal").onclick = () => {
+      modal.style.display = "none";
+      animacionFuegos.style.display = "none"; // Ocultar animación
+      audioCelebracion.pause(); // Detener audio
+      audioCelebracion.currentTime = 0; // Reiniciar audio
+    };
+  
+    // Cerrar modal al hacer clic fuera del contenido
+    window.onclick = (event) => {
+      if (event.target === modal) {
+        modal.style.display = "none";
+        animacionFuegos.style.display = "none"; // Ocultar animación
+        audioCelebracion.pause(); // Detener audio
+        audioCelebracion.currentTime = 0; // Reiniciar audio
+      }
+    };
+  }
 
  // Verificar Orden
  document.getElementById("verificar-orden").addEventListener("click", () => {
@@ -378,4 +395,4 @@ function iniciarTemporizador() {
     document.getElementById("verificar-orden").disabled = true; 
     document.getElementById("generar-palabra").disabled = true; 
   }
-  
+ 
