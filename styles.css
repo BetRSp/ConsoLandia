@@ -11,7 +11,7 @@ body {
 }
 
 #main-content {
-  width: 97%;
+  width: auto;
   min-height: calc(100vh - 120px); 
   background-image: url('images_animadas/consolandia.png'); 
   background-size: cover;
@@ -207,7 +207,7 @@ footer {
   font-style: normal;
   font-variant: small-caps;
   text-transform: capitalize;
-  width: 100%; /* Ocupa todo el ancho */
+  width: 100%;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
