@@ -160,8 +160,15 @@ document.getElementById("generar-palabra").addEventListener("click", () => {
   const palabra = palabras[index]; 
   palabraActual = palabra; 
   document.getElementById("palabra").textContent = palabra;
-  document.getElementById("imagen-palabra").src = imagenes[index];
-  document.getElementById("imagen-palabra").alt = palabra;
+
+  if (palabraActual) {
+    document.getElementById("imagen-palabra").src = imagenes[index];
+    document.getElementById("imagen-palabra").alt = palabra;
+    document.getElementById("imagen-palabra").style.display = "block";
+  } else {
+    document.getElementById("imagen-palabra").style.display = "none";
+  }
+
   document.getElementById("reproducir-audio").dataset.audio = audios[index];
 
   cargarJuego(palabra);
