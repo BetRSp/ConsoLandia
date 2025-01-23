@@ -1,314 +1,314 @@
 body {
-    font-family: 'Comic Sans MS', sans-serif;
-    background-color: white;
-    color: black;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-  
-  #main-content {
-    width: 97%;
-    min-height: calc(100vh - 120px); 
-    background-image: url('images_animadas/consolandia.png'); 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden; 
+  font-family: 'Comic Sans MS', sans-serif;
+  background-color: white;
+  color: black;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#main-content {
+  width: 97%;
+  min-height: calc(100vh - 120px); 
+  background-image: url('images_animadas/consolandia.png'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; 
 }
 
 .contenido-opaco {
-    width: 35%;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.7);
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
-    max-width: 600px; 
-    max-height: 80vh; 
-    overflow-y: auto; 
+  width: 35%;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+  max-width: 600px; 
+  max-height: 80vh; 
+  overflow-y: auto; 
 }
-  
-  .selector,
-  .resultado,
-  .practica,
-  .temporizador,
-  .juego {
-    margin-bottom: 20px;
-  }
-  
-  header {
-    background-color: #b7e0f8;
-    padding: 0px;
-   
-  }
-  
-  header h1 {
-    color: #4caf50;
-    font-weight: bold;
-    font-size: 36px;
-    margin-top: 0px;
-    background:  #b7e0f8;
-    text-align: center;
-    padding: 2px 0;
-    box-shadow: 0 -9px 8px rgba(0, 0, 0, 0.2);
-    text-shadow: 1px 2px 0px #000000, 5px 4px 0px rgba(0,0,0,0.15);
-    font-family: Lucida Console;
-    letter-spacing: 2px;
-    word-spacing: 0px;
-    text-decoration: none;
-    font-style: normal;
-    font-variant: small-caps;
-    text-transform: capitalize;
-    
-    
-  }
-  header p {
-    font-size: 1.5rem;
-    margin-top: -26px;
-  }
-  main {
-    padding: 20px;
-  }
-  
-  .selector, .resultado, .practica {
-    margin: 20px auto;
-    max-width: 600px;
-  }
-  #consonante {
-    font-size: 1.0em; 
-    padding: 3px; 
-    width: auto; 
-    border-radius: 5px;
-    overflow-y: auto; 
-    height: auto;
-    margin-bottom: -31px;
-  }
-  
-  .selector{
-    font-size: 21px;
-    color: black;
-    margin-top: -15px;
-  }
-  #label-consonante {
-    font-size: 33px;
-    font-family: monospace;
-    padding: 3px;
-    color: black;
-    font-weight: bold;
-  }
-  #label{
-    font-size: 1.0em; 
-    font-weight: bold;
-    color: #333; 
-  }
-  .resultado h2 {
-    font-size: 3rem; 
-    color: #333; 
-    text-align: center; 
-    margin: 10px 0; 
-    font-family: monospace;
-  }
-  #imagen-palabra {
-    max-width: 100%; 
-    max-height: 15vh; 
-    object-fit: contain; 
-}
-  
-  .resultado p {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: black;
-    font-weight: bold;
-  }
-  .practica p {
-    font-size: 1.5rem;
-    margin-bottom: 2px;
-    color: black;
-    font-weight: bold;
-}
-  textarea {
-    width: 100%;
-    height: auto;
-    font-size: 3.2em;
-    text-align: center;
 
+.selector,
+.resultado,
+.practica,
+.temporizador,
+.juego {
+  margin-bottom: 20px;
+}
+
+header {
+  background-color: #b7e0f8;
+  padding: 0px;
+ 
+}
+
+header h1 {
+  color: #4caf50;
+  font-weight: bold;
+  font-size: 36px;
+  margin-top: 0px;
+  background:  #b7e0f8;
+  text-align: center;
+  padding: 2px 0;
+  box-shadow: 0 -9px 8px rgba(0, 0, 0, 0.2);
+  text-shadow: 1px 2px 0px #000000, 5px 4px 0px rgba(0,0,0,0.15);
+  font-family: Lucida Console;
+  letter-spacing: 2px;
+  word-spacing: 0px;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: small-caps;
+  text-transform: capitalize;
+  
+  
+}
+header p {
+  font-size: 1.5rem;
+  margin-top: -26px;
+}
+main {
+  padding: 20px;
+}
+
+.selector, .resultado, .practica {
+  margin: 20px auto;
+  max-width: 600px;
+}
+#consonante {
+  font-size: 1.0em; 
+  padding: 3px; 
+  width: auto; 
+  border-radius: 5px;
+  overflow-y: auto; 
+  height: auto;
+  margin-bottom: -31px;
+}
+
+.selector{
+  font-size: 21px;
+  color: black;
+  margin-top: -15px;
+}
+#label-consonante {
+  font-size: 33px;
+  font-family: monospace;
+  padding: 3px;
+  color: black;
+  font-weight: bold;
+}
+#label{
+  font-size: 1.0em; 
+  font-weight: bold;
+  color: #333; 
+}
+.resultado h2 {
+  font-size: 3rem; 
+  color: #333; 
+  text-align: center; 
+  margin: 10px 0; 
+  font-family: monospace;
+}
+#imagen-palabra {
+  max-width: 100%; 
+  max-height: 15vh; 
+  object-fit: contain; 
+}
+
+.resultado p {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: black;
+  font-weight: bold;
+}
+.practica p {
+  font-size: 1.5rem;
+  margin-bottom: 2px;
+  color: black;
+  font-weight: bold;
+}
+textarea {
+  width: 100%;
+  height: auto;
+  font-size: 3.2em;
+  text-align: center;
+
+}
+@media (max-width: 480px) {
+  .contenido-opaco {
+      width: 90%; 
   }
-  @media (max-width: 480px) {
-    .contenido-opaco {
-        width: 90%; 
-    }
-    textarea {
-        font-size: 2em; 
-    }
-    header h1 {
-        font-size: 24px; 
-    }
+  textarea {
+      font-size: 2em; 
+  }
+  header h1 {
+      font-size: 24px; 
+  }
 }
 
 @media (min-width: 1024px) {
-    .contenido-opaco {
-        width: 50%; 
-    }
-    header h1 {
-        font-size: 48px; 
-    }
+  .contenido-opaco {
+      width: 50%; 
+  }
+  header h1 {
+      font-size: 48px; 
+  }
 }
 
+
+#area-escritura::placeholder {
+  font-size: 28px; 
+  color: #888; 
+  text-align: center; 
+  line-height: 53px; 
+}
+
+#puntuacion {
+  font-size: 24px; 
+  font-weight: bold;
+  color: black; 
+  text-align: center;
+  margin-top: 20px; 
   
-  #area-escritura::placeholder {
-    font-size: 28px; 
-    color: #888; 
-    text-align: center; 
-    line-height: 53px; 
-  }
-  
-  #puntuacion {
-    font-size: 24px; 
-    font-weight: bold;
-    color: black; 
-    text-align: center;
-    margin-top: 20px; 
-    
-  }
-  
-  button {
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    padding: 7px 13px;
-    font-size: 1em;
-    cursor: pointer;
-    border-radius: 5px;
-   
-  }
-  
-  button:hover {
-    background-color: #45a049;
-  }
-  
-  footer {
-    color: #4caf50;
-    font-weight: bold;
-    font-size: 1.7rem;
-    margin-top: 0px;
-    background:  #b7e0f8;
-    text-align: center;
-    padding: 2px 0;
-    box-shadow: 0 -9px 8px rgba(0, 0, 0, 0.2);
-    text-shadow: 1px -2px 0px #000000, 5px 1px 0px rgba(0,0,0,0.15);
-    font-family: Lucida Console;
-    letter-spacing: 2px;
-    word-spacing: 0px;
-    text-decoration: none;
-    font-style: normal;
-    font-variant: small-caps;
-    text-transform: capitalize;
-  }
-  
-  @media (max-width: 768px) {
-    main {
-      padding: 10px;
-    }
-  }
-  
-img {
-    max-width: 100%;
-    height: auto;
-    margin: 10px auto;
-    display: block;
-    filter: drop-shadow(1px 1px 20px orange);
-    border-radius: 10px;
-  }
-  
-  .juego {
-    margin-top: 30px;
-  }
-  .juego p {
-    font-size: 1.5rem;
-    margin-bottom: -12px;
-    color: black;
-    font-weight: bold;
-  }
-  #letras-contenedor {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    margin: 20px 0;
-    font-size: 24px;
-    font-family: monospace;
-    flex-wrap: wrap;
-  }
-  
-  #letras-contenedor span {
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 7px 13px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+ 
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+footer {
+  color: #4caf50;
+  font-weight: bold;
+  font-size: 1.7rem;
+  margin-top: 0px;
+  background:  #b7e0f8;
+  text-align: center;
+  padding: 2px 0;
+  box-shadow: 0 -9px 8px rgba(0, 0, 0, 0.2);
+  text-shadow: 1px -2px 0px #000000, 5px 1px 0px rgba(0,0,0,0.15);
+  font-family: Lucida Console;
+  letter-spacing: 2px;
+  word-spacing: 0px;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: small-caps;
+  text-transform: capitalize;
+}
+
+@media (max-width: 768px) {
+  main {
     padding: 10px;
-    border: 2px solid #4caf50;
-    border-radius: 5px;
-    background-color: #fff;
-    cursor: grab;
   }
-  
-  #letras-contenedor span.dragging {
-    opacity: 0.5;
-  }
-  .temporizador {
-    margin-top: 20px;
-    font-size: 1.5em;
-    color: red;
-    font-weight: bold;
-  }
-  /* Estilo del fondo del modal */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin: 10px auto;
+  display: block;
+  filter: drop-shadow(1px 1px 20px orange);
+  border-radius: 10px;
+}
+
+.juego {
+  margin-top: 30px;
+}
+.juego p {
+  font-size: 1.5rem;
+  margin-bottom: -12px;
+  color: black;
+  font-weight: bold;
+}
+#letras-contenedor {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 20px 0;
+  font-size: 24px;
+  font-family: monospace;
+  flex-wrap: wrap;
+}
+
+#letras-contenedor span {
+  padding: 10px;
+  border: 2px solid #4caf50;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: grab;
+}
+
+#letras-contenedor span.dragging {
+  opacity: 0.5;
+}
+.temporizador {
+  margin-top: 20px;
+  font-size: 1.5em;
+  color: red;
+  font-weight: bold;
+}
+/* Estilo del fondo del modal */
 .modal {
-  display: none; 
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4); 
+display: none; 
+position: fixed;
+z-index: 1000;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+overflow: auto;
+background-color: rgba(0, 0, 0, 0.4); 
 }
 
 /* Contenedor del contenido del modal */
 .modal-contenido {
-  width: 90%; 
-  max-width: 400px;
-  background-color: white;
-  margin: 15% auto;
-  padding: 20px;
-  border-radius: 10px;
-  width: 50%;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+width: 90%; 
+max-width: 400px;
+background-color: white;
+margin: 15% auto;
+padding: 20px;
+border-radius: 10px;
+width: 50%;
+text-align: center;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Botón para cerrar el modal */
 .cerrar {
-  color: #aaa;
-  font-size: 28px;
-  font-weight: bold;
-  float: right;
-  cursor: pointer;
+color: #aaa;
+font-size: 28px;
+font-weight: bold;
+float: right;
+cursor: pointer;
 }
 
 .cerrar:hover,
 .cerrar:focus {
-  color: black;
+color: black;
 }
 
 /* Texto del modal */
 #mensaje-modal {
-  font-size: 18px;
-  line-height: 1.5;
+font-size: 18px;
+line-height: 1.5;
 }
 
 /* Personalización con emojis */
 .emoticono {
-  font-size: 30px;
+font-size: 30px;
 }
