@@ -323,9 +323,19 @@ const palabrasPorConsonante = {
     document.getElementById("tiempo-restante").textContent = tiempoRestante;
     document.getElementById("mensaje-temporizador").textContent = "";
   
+    const sonidoTiempoFuera = new Audio("images_animadas/tiempofuera.mp3");
+  
     temporizadorIntervalo = setInterval(() => {
       tiempoRestante -= 1;
       document.getElementById("tiempo-restante").textContent = tiempoRestante;
+  
+      // Reproducir sonido faltando 3 segundos
+      if (tiempoRestante === 3) {
+        sonidoTiempoFuera.currentTime = 0; 
+        sonidoTiempoFuera.play().catch((error) => {
+          console.error("Error al reproducir el sonido:", error);
+        });
+      }
   
       if (tiempoRestante <= 0) {
         clearInterval(temporizadorIntervalo); 
@@ -351,6 +361,7 @@ const palabrasPorConsonante = {
     clearInterval(temporizadorIntervalo); 
     temporizadorCorriendo = false; 
   }
+  
   
   function desbloquearInteracciones() {
     document.querySelectorAll("#letras-contenedor span").forEach((span) => {
