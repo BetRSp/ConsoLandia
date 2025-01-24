@@ -144,43 +144,39 @@ const palabrasPorConsonante = {
   let tiempoRestante = 60; 
   let temporizadorCorriendo = false; 
   
-
-// Botón Generar Palabra
-document.getElementById("generar-palabra").addEventListener("click", () => {
-  const consonante = document.getElementById("consonante").value;
-
-  if (!palabrasPorConsonante[consonante]) {
-    mostrarModal("Por favor, selecciona una consonante válida.", "⚠️");
-    return;
-  }
-
-  const { palabras, imagenes, audios } = palabrasPorConsonante[consonante];
-  const index = Math.floor(Math.random() * palabras.length);
-
-  const palabra = palabras[index]; 
-  palabraActual = palabra; 
-  document.getElementById("palabra").textContent = palabra;
-
-  if (palabraActual) {
-    document.getElementById("imagen-palabra").src = imagenes[index];
-    document.getElementById("imagen-palabra").alt = palabra;
-    document.getElementById("imagen-palabra").style.display = "block";
-  } else {
-    document.getElementById("imagen-palabra").style.display = "none";
-  }
-
-  document.getElementById("reproducir-audio").dataset.audio = audios[index];
-
-  cargarJuego(palabra);
-  desbloquearInteracciones();
-
-  palabraVerificada = false; 
-
-
-  // Limpiar el contenido del textarea
-  document.getElementById("area-escritura").value = "";
+  // Botón Generar Palabra
+  document.getElementById("generar-palabra").addEventListener("click", () => {
+    const consonante = document.getElementById("consonante").value;
   
-    // Reanudar el temporizador si está pausado
+    if (!palabrasPorConsonante[consonante]) {
+      mostrarModal("Por favor, selecciona una consonante válida.", "⚠️");
+      return;
+    }
+  
+    const { palabras, imagenes, audios } = palabrasPorConsonante[consonante];
+    const index = Math.floor(Math.random() * palabras.length);
+  
+    const palabra = palabras[index]; 
+    palabraActual = palabra; 
+    document.getElementById("palabra").textContent = palabra;
+  
+    if (palabraActual) {
+      document.getElementById("imagen-palabra").src = imagenes[index];
+      document.getElementById("imagen-palabra").alt = palabra;
+      document.getElementById("imagen-palabra").style.display = "block";
+    } else {
+      document.getElementById("imagen-palabra").style.display = "none";
+    }
+  
+    document.getElementById("reproducir-audio").dataset.audio = audios[index];
+  
+    cargarJuego(palabra);
+    desbloquearInteracciones();
+  
+    palabraVerificada = false; 
+  
+    document.getElementById("area-escritura").value = "";
+    
     if (!temporizadorCorriendo && tiempoRestante > 0) {
       iniciarTemporizador();
     }
@@ -196,15 +192,13 @@ document.getElementById("generar-palabra").addEventListener("click", () => {
   function cargarJuego(palabra) {
     const contenedor = document.getElementById("letras-contenedor");
     contenedor.innerHTML = "";
-
-    // Crear las letras desordenadas
+  
     const letras = palabra.split("").sort(() => Math.random() - 0.5);
     letras.forEach((letra) => {
       const span = document.createElement("span");
       span.textContent = letra;
       span.draggable = true;
   
-      // Agregar eventos para arrastrar y soltar
       span.addEventListener("dragstart", dragStart);
       span.addEventListener("dragover", dragOver);
       span.addEventListener("drop", drop);
@@ -213,7 +207,6 @@ document.getElementById("generar-palabra").addEventListener("click", () => {
     });
   }
   
-
   let letraArrastrada = null;
   
   function dragStart(e) {
@@ -222,7 +215,7 @@ document.getElementById("generar-palabra").addEventListener("click", () => {
   }
   
   function dragOver(e) {
-    e.preventDefault(); // Permitir el evento de soltar
+    e.preventDefault();
   }
   
   function drop(e) {
@@ -230,7 +223,6 @@ document.getElementById("generar-palabra").addEventListener("click", () => {
   
     const letraSoltada = e.target; 
   
-    // Intercambiar letras
     if (letraArrastrada && letraArrastrada !== letraSoltada) {
       const temp = letraArrastrada.textContent;
       letraArrastrada.textContent = letraSoltada.textContent;
@@ -240,9 +232,22 @@ document.getElementById("generar-palabra").addEventListener("click", () => {
       letraArrastrada = null; 
     }
   }
-
+  
   // Función para mostrar el modal con mensaje personalizado
   function mostrarModal(mensaje, emoji = "") {
+    if (
+      mensaje === "La palabra escrita no coincide con la generada. Inténtalo de nuevo." || 
+      mensaje === "El orden de las letras no es correcto. Inténtalo de nuevo."
+    ) {
+      const sonidoError = document.getElementById("sonido-error");
+      if (sonidoError) {
+        sonidoError.currentTime = 0; 
+        sonidoError.play().catch((error) => {
+          console.error("Error al reproducir el sonido:", error);
+        });
+      }
+    }
+  
     const modal = document.getElementById("modal-alerta");
     const mensajeModal = document.getElementById("mensaje-modal");
     const animacionFuegos = document.getElementById("animacion-fuegos");
@@ -251,7 +256,6 @@ document.getElementById("generar-palabra").addEventListener("click", () => {
     mensajeModal.innerHTML = `<span class="emoticono">${emoji}</span> ${mensaje}`;
     modal.style.display = "block";
   
-    // Mostrar animación y reproducir audio para mensajes de éxito
     if (mensaje.includes("¡Correcto! ¡Bien hecho!")) {
       animacionFuegos.style.display = "block";
       audioCelebracion.play();
@@ -259,121 +263,89 @@ document.getElementById("generar-palabra").addEventListener("click", () => {
       animacionFuegos.style.display = "none";
     }
   
-    // Cerrar modal al hacer clic en la 'X'
     document.getElementById("cerrar-modal").onclick = () => {
       modal.style.display = "none";
-      animacionFuegos.style.display = "none"; // Ocultar animación
-      audioCelebracion.pause(); // Detener audio
-      audioCelebracion.currentTime = 0; // Reiniciar audio
+      animacionFuegos.style.display = "none";
+      audioCelebracion.pause();
+      audioCelebracion.currentTime = 0;
     };
   
-    // Cerrar modal al hacer clic fuera del contenido
     window.onclick = (event) => {
       if (event.target === modal) {
         modal.style.display = "none";
-        animacionFuegos.style.display = "none"; // Ocultar animación
-        audioCelebracion.pause(); // Detener audio
-        audioCelebracion.currentTime = 0; // Reiniciar audio
+        animacionFuegos.style.display = "none";
+        audioCelebracion.pause();
+        audioCelebracion.currentTime = 0;
       }
     };
   }
-
- // Verificar Orden
- document.getElementById("verificar-orden").addEventListener("click", () => {
-  const palabraCorrecta = document.getElementById("palabra").textContent.trim().toLowerCase(); 
-  const letrasContenedor = Array.from(document.getElementById("letras-contenedor").children);
-  const palabraOrdenada = letrasContenedor.map((span) => span.textContent).join("").toLowerCase(); 
-  const textoEscrito = document.getElementById("area-escritura").value.trim().toLowerCase(); 
-
-  // Función para eliminar acentos
-  function eliminarTildes(cadena) {
-    return cadena.normalize("NFD").replace(/[\u0300-\u036f]/g, ""); 
-  }
-
-  // Normalizar las palabras para eliminar tildes
-  const palabraCorrectaSinTildes = eliminarTildes(palabraCorrecta);
-  const palabraOrdenadaSinTildes = eliminarTildes(palabraOrdenada);
-  const textoEscritoSinTildes = eliminarTildes(textoEscrito);
-
-  console.log("Palabra Correcta (sin tildes):", palabraCorrectaSinTildes);
-  console.log("Palabra Ordenada (sin tildes):", palabraOrdenadaSinTildes);
-  console.log("Texto Escrito (sin tildes):", textoEscritoSinTildes);
-
-  // Nueva validación para verificar si el textarea está vacío
-  if (textoEscrito === "") {
-    mostrarModal("Debes escribir la palabra generada antes de verificar.", "📝");
-    return; 
-  }
-
-  if (palabraOrdenadaSinTildes === palabraCorrectaSinTildes && textoEscritoSinTildes === palabraCorrectaSinTildes) {
-    if (!palabraVerificada) {
-      puntuacion += 5;
-      document.getElementById("puntuacion").textContent = `Puntuación: ${puntuacion}`;
-      mostrarModal("¡Correcto! ¡Bien hecho! 🎉", "✅");
-      palabraVerificada = true;
-      pausarTemporizador();
-    } else {
-      mostrarModal("Esta palabra ya fue verificada.", "ℹ️");
+  
+  // Verificar Orden
+  document.getElementById("verificar-orden").addEventListener("click", () => {
+    const palabraCorrecta = document.getElementById("palabra").textContent.trim().toLowerCase(); 
+    const letrasContenedor = Array.from(document.getElementById("letras-contenedor").children);
+    const palabraOrdenada = letrasContenedor.map((span) => span.textContent).join("").toLowerCase(); 
+    const textoEscrito = document.getElementById("area-escritura").value.trim().toLowerCase(); 
+  
+    function eliminarTildes(cadena) {
+      return cadena.normalize("NFD").replace(/[\u0300-\u036f]/g, ""); 
     }
-  } else if (textoEscritoSinTildes !== palabraCorrectaSinTildes) {
-    mostrarModal("La palabra escrita no coincide con la generada. Inténtalo de nuevo.", "✍️");
-  } else if (palabraOrdenadaSinTildes !== palabraCorrectaSinTildes) {
-    mostrarModal("El orden de las letras no es correcto. Inténtalo de nuevo.", "🔠");
-  }
-});
-
-
-//Función para reiniciar el juego
-function reiniciarJuego() {
-  tiempoRestante = 60; 
-  puntuacion = 0; 
-  palabraVerificada = false; 
-  temporizadorCorriendo = false; 
-  clearInterval(temporizadorIntervalo); 
-
-  document.getElementById("puntuacion").textContent = `Puntuación: ${puntuacion}`;
-  document.getElementById("mensaje-temporizador").textContent = "";
-  document.getElementById("tiempo-restante").textContent = tiempoRestante;
-  document.getElementById("palabra").textContent = ""; 
-  document.getElementById("letras-contenedor").innerHTML = ""; 
-  document.getElementById("area-escritura").value = ""; 
-  document.getElementById("imagen-palabra").src = ""; 
-  document.getElementById("imagen-palabra").alt = ""; 
-
-  desbloquearInteracciones(); 
-}
-
- // Temporizador
-function iniciarTemporizador() {
-  temporizadorCorriendo = true; 
-  document.getElementById("tiempo-restante").textContent = tiempoRestante;
-  document.getElementById("mensaje-temporizador").textContent = "";
-
-  // Iniciar el temporizador
-  temporizadorIntervalo = setInterval(() => {
-    tiempoRestante -= 1;
+  
+    const palabraCorrectaSinTildes = eliminarTildes(palabraCorrecta);
+    const palabraOrdenadaSinTildes = eliminarTildes(palabraOrdenada);
+    const textoEscritoSinTildes = eliminarTildes(textoEscrito);
+  
+    if (textoEscrito === "") {
+      mostrarModal("Debes escribir la palabra generada antes de verificar.", "📝");
+      return; 
+    }
+  
+    if (palabraOrdenadaSinTildes === palabraCorrectaSinTildes && textoEscritoSinTildes === palabraCorrectaSinTildes) {
+      if (!palabraVerificada) {
+        puntuacion += 5;
+        document.getElementById("puntuacion").textContent = `Puntuación: ${puntuacion}`;
+        mostrarModal("¡Correcto! ¡Bien hecho! 🎉", "✅");
+        palabraVerificada = true;
+        pausarTemporizador();
+      } else {
+        mostrarModal("Esta palabra ya fue verificada.", "ℹ️");
+      }
+    } else if (textoEscritoSinTildes !== palabraCorrectaSinTildes) {
+      mostrarModal("La palabra escrita no coincide con la generada. Inténtalo de nuevo.", "✍️");
+    } else if (palabraOrdenadaSinTildes !== palabraCorrectaSinTildes) {
+      mostrarModal("El orden de las letras no es correcto. Inténtalo de nuevo.", "🔠");
+    }
+  });
+  
+  // Temporizador
+  function iniciarTemporizador() {
+    temporizadorCorriendo = true; 
     document.getElementById("tiempo-restante").textContent = tiempoRestante;
-
-    if (tiempoRestante <= 0) {
-      clearInterval(temporizadorIntervalo); 
-      document.getElementById("mensaje-temporizador").textContent =
-        `¡Tiempo agotado! Puntuación final: ${puntuacion}`;
-      bloquearInteracciones(); 
-      temporizadorCorriendo = false; 
-      mostrarModal("¡Tiempo agotado! ¿Quieres jugar de nuevo?  ", "⏰",);
-
-      // Agregar opción para reiniciar el juego
-      const reiniciarBtn = document.createElement("button");
-      reiniciarBtn.textContent = "Reiniciar Juego";
-      reiniciarBtn.style.marginTop = "10px";
-      reiniciarBtn.onclick = () => {
-        document.getElementById("modal-alerta").style.display = "none";
-        reiniciarJuego();
-      };
-      document.getElementById("mensaje-modal").appendChild(reiniciarBtn);
-    }
-  }, 1000);
-}
+    document.getElementById("mensaje-temporizador").textContent = "";
+  
+    temporizadorIntervalo = setInterval(() => {
+      tiempoRestante -= 1;
+      document.getElementById("tiempo-restante").textContent = tiempoRestante;
+  
+      if (tiempoRestante <= 0) {
+        clearInterval(temporizadorIntervalo); 
+        document.getElementById("mensaje-temporizador").textContent =
+          `¡Tiempo agotado! Puntuación final: ${puntuacion}`;
+        bloquearInteracciones(); 
+        temporizadorCorriendo = false; 
+        mostrarModal("¡Tiempo agotado! ¿Quieres jugar de nuevo?", "⏰");
+  
+        const reiniciarBtn = document.createElement("button");
+        reiniciarBtn.textContent = "Reiniciar Juego";
+        reiniciarBtn.style.marginTop = "10px";
+        reiniciarBtn.onclick = () => {
+          document.getElementById("modal-alerta").style.display = "none";
+          reiniciarJuego();
+        };
+        document.getElementById("mensaje-modal").appendChild(reiniciarBtn);
+      }
+    }, 1000);
+  }
   
   function pausarTemporizador() {
     clearInterval(temporizadorIntervalo); 
@@ -395,4 +367,23 @@ function iniciarTemporizador() {
     document.getElementById("verificar-orden").disabled = true; 
     document.getElementById("generar-palabra").disabled = true; 
   }
- 
+  
+  function reiniciarJuego() {
+    tiempoRestante = 60; 
+    puntuacion = 0; 
+    palabraVerificada = false; 
+    temporizadorCorriendo = false; 
+    clearInterval(temporizadorIntervalo); 
+  
+    document.getElementById("puntuacion").textContent = `Puntuación: ${puntuacion}`;
+    document.getElementById("mensaje-temporizador").textContent = "";
+    document.getElementById("tiempo-restante").textContent = tiempoRestante;
+    document.getElementById("palabra").textContent = ""; 
+    document.getElementById("letras-contenedor").innerHTML = ""; 
+    document.getElementById("area-escritura").value = ""; 
+    document.getElementById("imagen-palabra").src = ""; 
+    document.getElementById("imagen-palabra").alt = ""; 
+  
+    desbloquearInteracciones(); 
+  }
+  
