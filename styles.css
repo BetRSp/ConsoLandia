@@ -13,7 +13,7 @@ body {
 #main-content {
   width: auto;
   min-height: calc(100vh - 120px); 
-  background-image: url('images_animadas/consolandia.png'); 
+  background-image: url('images_animadas/consolandia1.png'); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -26,7 +26,7 @@ body {
 .contenido-opaco {
   width: 35%;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.9);
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
   max-width: 600px; 
@@ -43,7 +43,7 @@ body {
 }
 
 header {
-  background-color: #b7e0f8;
+  background-color: #cff50d;
   padding: 0px;
  
 }
@@ -53,7 +53,7 @@ header h1 {
   font-weight: bold;
   font-size: 36px;
   margin-top: 0px;
-  background:  #b7e0f8;
+  background: #cff50d;
   text-align: center;
   padding: 2px 0;
   box-shadow: 0 -9px 8px rgba(0, 0, 0, 0.2);
@@ -202,7 +202,7 @@ footer {
   color: #4caf50;
   font-weight: bold;
   font-size: 1.7rem;
-  background:  #b7e0f8;
+  background:  #cff50d;
   text-align: center;
   box-shadow: 0 -9px 8px rgba(0, 0, 0, 0.2);
   text-shadow: 1px -2px 0px #000000, 5px 1px 0px rgba(0,0,0,0.15);
