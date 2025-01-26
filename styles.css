@@ -43,8 +43,8 @@ body {
 }
 
 header {
-  background: rgb(119,147,238);
-  background: linear-gradient(0deg, rgba(119,147,238,1) 0%, rgba(247,235,25,1) 67%); 
+  background: rgb(247,235,25);
+  background: radial-gradient(circle, rgba(247,235,25,1) 0%, rgba(119,147,238,1) 100%); 
   padding: 0px;
  
 }
