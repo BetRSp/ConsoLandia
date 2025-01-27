@@ -141,7 +141,7 @@ const palabrasPorConsonante = {
   let palabraVerificada = false;
   let palabraActual = "";
   let temporizadorIntervalo;
-  let tiempoRestante = 60;
+  let tiempoRestante = 180;
   let temporizadorCorriendo = false;
   
   // Botón Generar Palabra
@@ -393,7 +393,7 @@ const palabrasPorConsonante = {
   }
   
   function reiniciarJuego() {
-      tiempoRestante = 60;
+      tiempoRestante = 180;
       puntuacion = 0;
       palabraVerificada = false;
       temporizadorCorriendo = false;
