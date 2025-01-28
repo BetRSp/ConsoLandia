@@ -346,3 +346,62 @@ font-size: 30px;
     display: block;
   }
 }
+.menu {
+  background: rgb(119,147,238);
+  background: radial-gradient(circle, rgba(119,147,238,1) 0%, rgba(247,235,25,1) 67%); 
+  padding: 0px;
+  position: relative;
+  width: 72px;
+  border-radius: 15px;
+  margin-left: 13px;
+}
+
+.menu-toggle {
+  font-size: 24px;
+  color: black;
+  cursor: pointer;
+}
+
+.menu-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none; /* Oculto por defecto */
+  background: rgb(119,147,238);
+  position: absolute;
+  top: 34px;
+  left: 0;
+  width: 200px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu-items li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.menu-items li:last-child {
+  border-bottom: none;
+}
+
+.menu-items a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  padding: 12px 15px;
+  transition: background 0.3s;
+}
+
+.menu-items a i {
+  margin-right: 10px;
+}
+
+.menu-items a:hover {
+  background: #f7eb19
+}
+
+/* Mostrar el menú cuando se activa la clase */
+.menu:hover .menu-items {
+  display: block;
+}

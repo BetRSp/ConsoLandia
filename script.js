@@ -410,4 +410,6 @@ const palabrasPorConsonante = {
   
       desbloquearInteracciones();
   }
-  
+  document.getElementById("menuToggle").addEventListener("click", function() {
+    document.querySelector(".menu").classList.toggle("open");
+});
