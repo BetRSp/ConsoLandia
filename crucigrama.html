@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crucigrama de Animales</title>
+    <style>
+
+html, body {
+    font-family: Lucida Console;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+    margin: 0;
+    padding: 10px 0;
+    color: #4caf50;
+    text-shadow: 1px 2px 0px #000000, 5px 4px 0px rgba(0,0,0,0.15);
+}
+
+#crucigrama {
+    display: grid;
+    grid-template-columns: repeat(12, clamp(30px, 6vw, 50px));
+    grid-template-rows: repeat(11, clamp(30px, 6vw, 50px));
+    gap: 2px;
+    background-color: transparent;
+    padding: 10px;
+    max-width: 600px;
+    margin: auto;
+    margin-top: 11px;
+}   
+
+.cell {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #000;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(12px, 2vw, 22px);
+}
+
+.cell input {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: clamp(12px, 2vw, 22px);
+    text-transform: uppercase;
+    background: transparent;
+    border: none;
+}
+
+.cell:empty {
+            border: none;
+            background-color: transparent;
+        }
+
+
+
+        .cell.inicial {
+            background-color: #4caf50;
+        }
+
+        .cell input:focus {
+            outline: none;
+            background-color: #f0f0f0;
+        }
+      
+        .animal-img {
+    width: clamp(30px, 5vw, 50px);
+    height: clamp(30px, 5vw, 50px);
+    position: absolute;
+    z-index: 2;
+}
+
+
+
+.murcielago {
+    top: 4%;
+    left: 36%;
+}
+
+.serpiente {
+    top: 28%;
+    left: 24%;
+}
+
+.delfin {
+    top: 11%;
+    right: 38%;
+}
+
+.elefante {
+    top: 11%;
+    right: 34%;
+}
+
+.leon {
+    top: 79%;
+    left: 54%;
+}
+
+.gato {
+    top: 70%;
+    left: 28%;
+}
+
+.perro {
+    top: 53%;
+    left: 28%;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-contenido {
+width: 90%; 
+max-width: 400px;
+background-color: white;
+margin: 15% auto;
+padding: 20px;
+border-radius: 10px;
+width: 50%;
+text-align: center;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cerrar {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cerrar:hover {
+    color: black;
+}
+
+.emoticono {
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+#animacion-fuegos {
+  display: none; /* Solo se muestra dinámicamente */
+  position: fixed; /* Para que esté fijo en la pantalla */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Ocupa todo el ancho */
+  height: 100vh; /* Ocupa todo el alto */
+  object-fit: cover; /* Evita distorsión de la imagen */
+  margin: 0; /* Quita el margen */
+  border-radius: 0; /* Asegura que no tenga bordes redondeados */
+  filter: none; /* Quita sombras si aplican */
+}
+
+@media (max-width: 600px) {
+  #animacion-fuegos {
+    width: 100vw; /* 100% del ancho de la ventana */
+    height: 100vh; /* 100% del alto de la ventana */
+    position: fixed; /* Asegúrate de que esté fijo en la pantalla */
+    top: 0;
+    left: 0;
+    object-fit: cover; /* Asegura que la animación no se deforme */
+    display: block;
+  }
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CRUCIGRAMA PARA NIÑOS</h1>
+        <div id="crucigrama"></div>
+    </div>
+    <div id="modal-alerta" class="modal">
+        <div class="modal-contenido">
+            <span id="cerrar-modal" class="cerrar">&times;</span>
+            <p id="mensaje-modal"></p>
+        </div>
+    </div>
+    <audio id="audio-celebracion" src="images_animadas/ninosgritandosii.mp3"></audio>
+    <img id="animacion-fuegos" src="images_animadas/fuegospirotecnicos.gif" alt="" style="display: none; width: 100%; max-height: 614px;">
+    <audio id="sonido-error" src="images_animadas/sonidoincorrecto.mp3" preload="auto"></audio>
+    <script>
+        const palabras = [
+            { palabra: "MURCIELAGO", inicio: [0, 2], direccion: "V", img: "images_animadas/murcielago.png"},
+            { palabra: "SERPIENTE", inicio: [2, 0], direccion: "H", img: "images_animadas/serpiente.png" },
+            { palabra: "DELFIN", inicio: [1, 8], direccion: "V", img: "images_animadas/delfin.png" },
+            { palabra: "ELEFANTE", inicio: [1, 9], direccion: "V", img: "images_animadas/elefante.png" },
+            { palabra: "LEON", inicio: [8, 8], direccion: "H", img: "images_animadas/leon.png" },
+            { palabra: "GATO", inicio: [7, 1], direccion: "H", img: "images_animadas/gato.png" },
+            { palabra: "PERRO", inicio: [5, 1], direccion: "H", img: "images_animadas/perro.png" }
+        ];
+
+       function crearCrucigrama() {
+    const crucigrama = document.getElementById('crucigrama');
+    
+    // Crear la cuadrícula del crucigrama
+    for (let i = 0; i < 11; i++) {
+        for (let j = 0; j < 12; j++) {
+            const cell = document.createElement('div');
+            cell.className = 'cell';
+            cell.dataset.row = i;
+            cell.dataset.col = j;
+            crucigrama.appendChild(cell);
+        }
+    }
+
+    // Agregar las imágenes de los animales
+    palabras.forEach(palabra => {
+        const img = document.createElement('img');
+        img.src = palabra.img;
+        img.className = `animal-img ${palabra.palabra.toLowerCase()}`;
+        crucigrama.appendChild(img);
+    });
+
+    // Colocar las celdas interactivas evitando duplicación de vocales
+    palabras.forEach(({ palabra, inicio, direccion }) => {
+        const [row, col] = inicio;
+        [...palabra].forEach((letra, index) => {
+            if (letra !== ' ') {
+                const posRow = direccion === 'V' ? row + index : row;
+                const posCol = direccion === 'H' ? col + index : col;
+                const cell = document.querySelector(
+                    `.cell[data-row="${posRow}"][data-col="${posCol}"]`
+                );
+
+                if (cell) {
+                    let existingInput = cell.querySelector("input");
+
+                    if (existingInput) {
+                        return; // Si ya hay una letra, la celda se omite
+                    } else {
+                        // Crear input si no existe
+                        const input = document.createElement('input');
+                        input.type = 'text';
+                        input.maxLength = 1;
+                        input.dataset.correcta = letra;
+
+                        // Solo mostrar la letra inicial
+                        if (index === 0) {
+                            input.value = letra;
+                            input.readOnly = true;
+                            cell.classList.add('inicial');
+                        }
+
+                        // Evento para navegación automática
+                        input.addEventListener('input', function() {
+                            if (this.value.length === 1) {
+                                moverSiguienteCelda(this, direccion);
+                            }
+                        });
+
+                        // Evento para borrar y moverse atrás con Backspace
+                        input.addEventListener('keydown', function(e) {
+                            if (e.key === 'Backspace' && this.value === '') {
+                                moverAnteriorCelda(this, direccion);
+                                e.preventDefault();
+                            }
+                        });
+
+                        cell.appendChild(input);
+                    }
+                }
+            }
+        });
+    });
+
+    // Agregar botones
+    agregarBotones();
+}
+
+// Función para moverse a la siguiente celda automáticamente
+function moverSiguienteCelda(input, direccion) {
+    let cell = input.parentElement;
+    let row = parseInt(cell.dataset.row);
+    let col = parseInt(cell.dataset.col);
+    let siguiente;
+
+    do {
+        if (direccion === 'V') {
+            row++;
+        } else {
+            col++;
+        }
+        siguiente = document.querySelector(`.cell[data-row="${row}"][data-col="${col}"] input`);
+    } while (siguiente && siguiente.value);
+
+    if (siguiente) siguiente.focus();
+}
+
+// Función para moverse a la celda anterior cuando se presiona Backspace
+function moverAnteriorCelda(input, direccion) {
+    let cell = input.parentElement;
+    let row = parseInt(cell.dataset.row);
+    let col = parseInt(cell.dataset.col);
+    let anterior;
+
+    do {
+        if (direccion === 'V') {
+            row--;
+        } else {
+            col--;
+        }
+        anterior = document.querySelector(`.cell[data-row="${row}"][data-col="${col}"] input`);
+    } while (anterior && anterior.readOnly);
+
+    if (anterior) {
+        anterior.value = ''; // Borra la celda anterior si no es fija
+        anterior.focus();
+    }
+}
+
+// Función para verificar si las palabras ingresadas son correctas
+function verificarCrucigrama() {
+    let correcto = true;
+    let celdasIncorrectas = 0;
+
+    document.querySelectorAll('.cell input').forEach(input => {
+        if (input.value.toUpperCase() !== input.dataset.correcta) {
+            correcto = false;
+            if (!input.readOnly) { // Solo contar celdas no readonly
+                celdasIncorrectas++;
+            }
+        }
+    });
+
+    if (correcto) {
+        mostrarModal("¡Felicidades! Has completado el crucigrama correctamente. 🎉", "✅");
+    } else {
+        mostrarModal(`Hay ${celdasIncorrectas} letras incorrectas. ¡Sigue intentando!`, "❌");
+    }
+}
+
+// Función para mostrar el modal
+function mostrarModal(mensaje, emoji = "") {
+    const modal = document.getElementById("modal-alerta");
+    const mensajeModal = document.getElementById("mensaje-modal");
+    const animacionFuegos = document.getElementById("animacion-fuegos");
+    const audioCelebracion = document.getElementById("audio-celebracion");
+    const sonidoError = document.getElementById("sonido-error");
+
+    mensajeModal.innerHTML = `<span class="emoticono">${emoji}</span> ${mensaje}`;
+    modal.style.display = "block";
+
+    if (mensaje.includes("¡Felicidades!")) {
+        animacionFuegos.style.display = "block";
+        audioCelebracion.play().catch(error => console.error("Error playing celebration:", error));
+    } else {
+        animacionFuegos.style.display = "none";
+        sonidoError.play().catch(error => console.error("Error playing error sound:", error));
+    }
+
+    // Cerrar modal con el botón X
+    document.getElementById("cerrar-modal").onclick = () => {
+        modal.style.display = "none";
+        animacionFuegos.style.display = "none";
+        audioCelebracion.pause();
+        audioCelebracion.currentTime = 0;
+    };
+
+    // Cerrar modal haciendo clic fuera
+    window.onclick = (event) => {
+        if (event.target === modal) {
+            modal.style.display = "none";
+            animacionFuegos.style.display = "none";
+            audioCelebracion.pause();
+            audioCelebracion.currentTime = 0;
+        }
+    };
+}
+
+// Función de inicialización que debe ejecutarse cuando la página carga
+function inicializarModal() {
+    // Agregar estilos
+    const styleSheet = document.createElement("style");
+    styleSheet.textContent = modalStyles;
+    document.head.appendChild(styleSheet);
+
+    // Agregar HTML del modal
+    document.body.insertAdjacentHTML('beforeend', modalHTML);
+}
+
+// Agregar la inicialización al window.onload existente
+const originalOnload = window.onload;
+window.onload = function() {
+    if (originalOnload) {
+        originalOnload();
+    }
+    crearCrucigrama();
+    inicializarModal();
+};
+
+// Función para agregar botones de "Regresar" y "Verificar"
+function agregarBotones() {
+    const contenedorBotones = document.createElement('div');
+    contenedorBotones.style.textAlign = 'center';
+    contenedorBotones.style.zIndex = 1000;
+
+    // Detectar si es Android
+    const esAndroid = /Android/i.test(window.navigator.userAgent);
+    if (esAndroid) {
+        contenedorBotones.style.marginTop = '10px'; // Ajuste específico para Android
+    } else {
+        contenedorBotones.style.marginTop = '-66px'; // Mantener para web
+    }
+
+    // Botón de Regresar
+    const btnRegresar = document.createElement('button');
+    btnRegresar.textContent = 'Regresar';
+    btnRegresar.style.margin = '10px';
+    btnRegresar.style.backgroundColor = '#45a049';
+    btnRegresar.style.color = 'white';
+    btnRegresar.style.padding = '3px 12px';
+    btnRegresar.style.border = 'none';
+    btnRegresar.style.borderRadius = '5px';
+    btnRegresar.style.cursor = 'pointer';
+    btnRegresar.style.fontSize = '16px';
+    btnRegresar.style.transition = 'background 0.3s';
+
+    btnRegresar.addEventListener('mouseover', () => btnRegresar.style.backgroundColor = '#3d8b40');
+    btnRegresar.addEventListener('mouseout', () => btnRegresar.style.backgroundColor = '#45a049');
+    btnRegresar.onclick = () => window.location.href = 'index.html';
+
+    // Botón de Verificar
+    const btnVerificar = document.createElement('button');
+    btnVerificar.textContent = 'Verificar';
+    btnVerificar.style.margin = '10px';
+    btnVerificar.style.backgroundColor = '#45a049';
+    btnVerificar.style.color = 'white';
+    btnVerificar.style.padding = '3px 12px';
+    btnVerificar.style.border = 'none';
+    btnVerificar.style.borderRadius = '5px';
+    btnVerificar.style.cursor = 'pointer';
+    btnVerificar.style.fontSize = '16px';
+    btnVerificar.style.transition = 'background 0.3s';
+
+    btnVerificar.addEventListener('mouseover', () => btnVerificar.style.backgroundColor = '#3d8b40');
+    btnVerificar.addEventListener('mouseout', () => btnVerificar.style.backgroundColor = '#45a049');
+    btnVerificar.onclick = verificarCrucigrama;
+
+    // Agregar botones al contenedor
+    contenedorBotones.appendChild(btnRegresar);
+    contenedorBotones.appendChild(btnVerificar);
+
+    // Agregar los botones justo después del crucigrama
+    const crucigrama = document.getElementById('crucigrama');
+    crucigrama.parentNode.insertBefore(contenedorBotones, crucigrama.nextSibling);
+
+    // Agregar modal de felicitaciones
+    agregarModal();
+}
+
+// Función para agregar el modal de felicitaciones
+function agregarModal() {
+    const modal = document.createElement('div');
+    modal.id = 'modalFelicitaciones';
+    modal.style.display = 'none';
+    modal.style.position = 'fixed';
+    modal.style.top = '50%';
+    modal.style.left = '50%';
+    modal.style.transform = 'translate(-50%, -50%)';
+    modal.style.background = 'white';
+    modal.style.padding = '20px';
+    modal.style.borderRadius = '10px';
+    modal.style.boxShadow = '0px 0px 10px rgba(0, 0, 0, 0.3)';
+    modal.innerHTML = `
+        <h2>¡Felicidades!</h2>
+        <p>Has completado el crucigrama correctamente. ¡Bien hecho!</p>
+        <button onclick="document.getElementById('modalFelicitaciones').style.display = 'none'">Cerrar</button>
+    `;
+    document.body.appendChild(modal);
+}
+
+window.onload = crearCrucigrama;
+
+function ajustarAltura() {
+    document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
+    document.body.style.height = 'calc(var(--vh) * 100)';
+}
+
+window.addEventListener('resize', ajustarAltura);
+ajustarAltura(); // Se ejecuta al cargar
+
+
+    </script>
+</body>
+</html>
