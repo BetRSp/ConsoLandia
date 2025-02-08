@@ -7,7 +7,7 @@
     <style>
 
 html, body {
-    font-family: Lucida Console;
+    font-family: 'Comic Sans MS', sans-serif;
     margin: 0;
     padding: 0;
     width: 100vw;
@@ -127,14 +127,15 @@ h1 {
 }
 
 .modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.5);
+display: none; 
+position: fixed;
+z-index: 1000;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+overflow: auto;
+background-color: rgba(0, 0, 0, 0.4); 
 }
 
 .modal-contenido {
@@ -150,13 +151,12 @@ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .cerrar {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
+color: #aaa;
+font-size: 28px;
+font-weight: bold;
+float: right;
+cursor: pointer;
 }
-
 .cerrar:hover {
     color: black;
 }
