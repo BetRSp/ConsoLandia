@@ -35,14 +35,15 @@ h1 {
 
 #crucigrama {
     display: grid;
-    grid-template-columns: repeat(12, clamp(30px, 6vw, 50px));
-    grid-template-rows: repeat(11, clamp(30px, 6vw, 50px));
+    grid-template-columns: repeat(12, clamp(25px, 5vw, 45px));
+    grid-template-rows: repeat(11, clamp(25px, 5vw, 45px));
     gap: 2px;
     background-color: transparent;
     padding: 10px;
     max-width: 600px;
     margin: auto;
     margin-top: 11px;
+    position: relative; 
 }   
 
 .cell {
@@ -85,45 +86,63 @@ h1 {
         .animal-img {
     width: clamp(30px, 5vw, 50px);
     height: clamp(30px, 5vw, 50px);
-    position: absolute;
+    position: absolute; 
     z-index: 2;
 }
 
+.contenido-opaco {
+  width: 35%;
+  padding: 42px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+  max-width: 600px; 
+  max-height: 80vh; 
+}
 
-
+@media (max-width: 480px) {
+  .contenido-opaco {
+      width: 90%; 
+  }
+}
+  @media (min-width: 1024px) {
+  .contenido-opaco {
+      width: 50%; 
+  }
+}
 .murcielago {
-    top: 4%;
-    left: 36%;
+    top: -7%;
+    left: 20%;
 }
 
 .serpiente {
-    top: 28%;
-    left: 24%;
+    top: 19%;
+    left: -7%;
 }
 
 .delfin {
-    top: 11%;
-    right: 38%;
+    top: 2%;
+    right: 18%;
 }
 
 .elefante {
-    top: 11%;
-    right: 34%;
+    top: 2%;
+    right: 9%;
 }
 
 .leon {
-    top: 79%;
-    left: 54%;
+    top: 72%;
+    left: 63%;
 }
 
 .gato {
-    top: 70%;
-    left: 28%;
+    top: 63%;
+    left: 3%;
 }
 
 .perro {
-    top: 53%;
-    left: 28%;
+    top: 46%;
+    left: 1%;
 }
 
 .modal {
@@ -194,6 +213,7 @@ cursor: pointer;
 <body>
     <div class="container">
         <h1>CRUCIGRAMA PARA NIÑOS</h1>
+    <div class="contenido-opaco">
         <div id="crucigrama"></div>
     </div>
     <div id="modal-alerta" class="modal">
@@ -419,7 +439,12 @@ window.onload = function() {
 function agregarBotones() {
     const contenedorBotones = document.createElement('div');
     contenedorBotones.style.textAlign = 'center';
-    contenedorBotones.style.zIndex = 1000;
+    contenedorBotones.style.position = 'fixed';
+    contenedorBotones.style.bottom = '20px';
+    contenedorBotones.style.right = '20px';
+    contenedorBotones.style.display = 'flex';
+    contenedorBotones.style.gap = '10px'; // Espaciado entre botones
+    contenedorBotones.style.zIndex = '1000';  // Para estar por encima de todo
 
     // Detectar si es Android
     const esAndroid = /Android/i.test(window.navigator.userAgent);
